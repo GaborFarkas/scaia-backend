@@ -36,7 +36,7 @@ if(!empty($_POST))
         'display' => 'Permission Name',
         'required' => true,
         'unique' => 'permissions',
-        'min' => 1,
+        'min' => 3,
         'max' => 25
       )
     ));
@@ -82,6 +82,7 @@ $count = 0;
       <?php
       //List each permission level
       foreach ($permissionData as $v1) {
+        if(!in_array($permissionData[$count]->id,$permission_exempt)){
         ?>
         <tr>
           <?php /*  <td><?php if(!in_array($permissionData[$count]->id,$permission_exempt)){?><input type='checkbox' name='delete[<?=$permissionData[$count]->id?>]' id='delete[<?=$permissionData[$count]->id?>]' value='<?=$permissionData[$count]->id?>'><?php } ?></td>//LEGACY BA 9162017 */?>
@@ -89,6 +90,7 @@ $count = 0;
           <td><a href='admin.php?view=permission&id=<?=$permissionData[$count]->id?>'><?php echo ucfirst($permissionData[$count]->name);?></a></td>
         </tr>
         <?php
+        }
         $count++;
       }
       ?>

@@ -9,7 +9,7 @@ $successes = [];
 $searchC = 0;
 
 //Check if selected permission level exists
-if(!permissionIdExists($permissionId)){
+if(!permissionIdExists($permissionId) || in_array($permissionId,$permission_exempt)){
   Redirect::to($us_url_root.'users/admin.php?view=permissions'); die();
 }
 
@@ -71,7 +71,7 @@ if(!empty($_POST)){
           'display' => 'Permission Name',
           'required' => true,
           'unique' => 'permissions',
-          'min' => 1,
+          'min' => 3,
           'max' => 25
         )
       ));

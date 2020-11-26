@@ -1,5 +1,4 @@
 <?php
-// This is a user-facing page
 /*
 UserSpice 5
 An Open Source PHP User Management System
@@ -112,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 } else {
   $response->token = Token::generate();
+  $response->recaptcha = $settings->recaptcha != 0 ? $settings->recap_public : null;
   echo json_encode($response);
   exit();
 }

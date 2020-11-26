@@ -21,12 +21,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // ini_set('display_errors', 1);
 ini_set('allow_url_fopen', 1);
 require_once '../admin/users/init.php';
+$db = DB::getInstance();
+$settings = $db->query("SELECT * FROM settings")->first();
 
 if (ipCheckBan() || $user->isLoggedIn()) {
     die();
 }
 
 $response = new stdClass();
+
+if ($settings->registration == 0) {
+    $response->registrationDisabled = true;
+    echo json_encode($response);
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $vericode = randomstring(15);
@@ -228,52 +236,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo json_encode($response);
     exit();
 }
-
-
-
-
-?>
-<?php header('X-Frame-Options: DENY'); ?>
-<div id="page-wrapper">
-<div class="container">
-<?php
-if ($settings->registration == 1) {
-    require $abs_us_root.$us_url_root.'users/views/_join.php';
-} else {
-    require $abs_us_root.$us_url_root.'users/views/_joinDisabled.php';
-}
-includeHook($hooks, 'bottom');
-?>
-
-</div>
-</div>
-
-<!-- footers -->
-<?php require_once $abs_us_root.$us_url_root.'users/includes/page_footer.php'; // the final html footer copyright row + the external js calls?>
-
-<?php if ($settings->recaptcha > 0) { ?>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-    function submitForm() {
-        document.getElementById("payment-form").submit();
-    }
-</script>
-<?php } ?>
-<?php if ($settings->auto_assign_un == 0) { ?>
-
-<?php } ?>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#password_view_control').hover(function () {
-            $('#password').attr('type', 'text');
-            $('#confirm').attr('type', 'text');
-        }, function () {
-            $('#password').attr('type', 'password');
-            $('#confirm').attr('type', 'password');
-        });
-    });
-</script>
-
-
-
-<?php require_once $abs_us_root.$us_url_root.'users/includes/html_footer.php'; // currently just the closing /body and /html?>

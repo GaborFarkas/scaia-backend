@@ -26,16 +26,17 @@ $response = new stdClass();
 ?>
 <?php
 if(ipCheckBan()){
-  $response->banned = true;
-  echo json_encode($response);
-  exit();
-} else {
-  $response->banned = false;
+  die();
 }
+
 $response->error = null;
 $reCaptchaValid=FALSE;
 if($user->isLoggedIn()) {
-  $response->userData = $user->apiData();
+  if ($user->isBanned()) {
+    $response->banned = true;
+  } else {
+    $response->userData = $user->apiData();
+  }
   echo json_encode($response);
   exit();
 }

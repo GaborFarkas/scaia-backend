@@ -277,6 +277,11 @@ class User
         ];
     }
 
+    public function isBanned()
+    {
+        return $this->_data->permissions == 0;
+    }
+
     public function isLoggedIn()
     {
         return $this->_isLoggedIn;

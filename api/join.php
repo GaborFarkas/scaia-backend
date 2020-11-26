@@ -53,7 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (Input::exists()) {
         $token = $_POST['csrf'];
         if (!Token::check($token)) {
-            include $abs_us_root.$us_url_root.'usersc/scripts/token_error.php';
+            $response->error = 'token';
+            echo json_encode($response);
+            exit();
         }
     
         $fname = Input::get('fname');
@@ -94,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'valid_email' => true,
                 'unique' => 'users',
             ],
-
             'password' => [
                 'display' => lang('GEN_PASS'),
                 'required' => true,
@@ -143,7 +144,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
                 if (!$res['success']) {
                     // What happens when the reCAPTCHA is not properly set up
-                    echo 'reCAPTCHA error: Check to make sure your keys match the registered domain and are in the correct locations. You may also want to doublecheck your code for typos or syntax errors.';
+                    $response->error = 'recaptcha';
+                    echo json_encode($response);
+                    exit();
                 } else {
                     $reCaptchaValid = true;
                     $form_valid = true;
@@ -203,14 +206,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     } else {
                         logger($theNewId, 'User', 'Registration completed.');
                     }
+
+                    $response->error = '';
+                    echo json_encode($response);
                     exit();
                 }
             }
-        } //Validation
-    } //Input exists    
+        } else {
+            $response->error = 'input';
+            echo json_encode($response);
+            exit();
+        }
+    } //Input exists
 } else {
     $response->token = Token::generate();
     $response->recaptcha = $settings->recaptcha != 0 ? $settings->recap_public : null;
+    $response->minUserLength = $settings->min_un;
+    $response->maxUserLength = $settings->max_un;
+    $response->minPwLength = $settings->min_pw;
+    $response->maxPwLength = $settings->max_pw;
     echo json_encode($response);
     exit();
 }

@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $user = new User();
       $login = $user->loginEmail(Input::get('username'), trim(Input::get('password')), $remember);
       if ($login) {
-        $response->userData = $user->data();
+        $response->userData = $user->apiData();
         echo json_encode($response);
         exit();
       } else {

@@ -21,7 +21,10 @@ class Validate
 {
 	public
 	$_errors = [],
-	$_db     = null;
+	$_db     = null,
+	$_unique_err = false,
+	$_invalid_email = false,
+	$_not_email_err = false;
 
 
 	public function __construct()  {
@@ -89,10 +92,13 @@ class Validate
 						if ($this->_db->get($table, $fields)) {
 							$str = lang("VAL_EXISTS");
 							$str1 = lang("VAL_DB");
-							if ($this->_db->count())
-							$this->addError(["{$display} $str {$display}",$item]);
-						} else
-						$this->addError([$str1,$item]);
+							if ($this->_db->count()) {
+								$this->addError(["{$display} $str {$display}",$item]);
+								$this->_unique_err = true;
+							}
+						} else {
+							$this->addError([$str1,$item]);
+						}
 						break;
 
 						case 'unique_update':
@@ -102,8 +108,10 @@ class Validate
 						$query = "SELECT * FROM {$table} WHERE id != {$id} AND {$item} = '{$value}'";
 						$check = $this->_db->query($query);
 						$str = lang("VAL_EXISTS");
-						if ($check->count())
-						$this->addError(["{$display} $str {$display}",$item]);
+						if ($check->count()) {
+							$this->addError(["{$display} $str {$display}",$item]);
+							$this->_unique_err = true;
+						}
 						break;
 
 						case 'is_numeric': case 'is_num':
@@ -114,15 +122,20 @@ class Validate
 
 						case 'valid_email':
 						$str = lang("VAL_EMAIL");
-						if(!filter_var($value,FILTER_VALIDATE_EMAIL))
-						$this->addError(["{$display} $str",$item]);
+						if(!filter_var($value,FILTER_VALIDATE_EMAIL)) {
+							$this->addError(["{$display} $str",$item]);
+							$this->_invalid_email = true;
+						}
+						
 						break;
 
 						case 'is_not_email':
 						if($rule_value){
 						$str = lang("VAL_NO_EMAIL");
-						if(filter_var($value,FILTER_VALIDATE_EMAIL))
-						$this->addError(["{$display} $str",$item]);
+						if(filter_var($value,FILTER_VALIDATE_EMAIL)) {
+							$this->addError(["{$display} $str",$item]);
+							$this->_not_email_err = true;
+						}
 						}
 						break;
 
@@ -322,5 +335,17 @@ class Validate
 
 	public function passed(){
 		return empty($this->_errors);
+	}
+
+	public function unique_error(){
+		return $this->_unique_err;
+	}
+
+	public function invalid_email(){
+		return $this->_invalid_email;
+	}
+
+	public function not_email_error(){
+		return $this->_not_email_err;
 	}
 }

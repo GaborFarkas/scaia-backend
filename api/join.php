@@ -203,7 +203,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     $theNewId = $user->create($fields);
                 } catch (Exception $e) {
-                    die($e->getMessage());
+                    $response->error = 'server';
+                    echo json_encode($response);
+                    die();
                 }
                 if ($form_valid == true) { //this allows the plugin hook to kill the post but it must delete the created user
                     if ($act == 1) {
@@ -221,7 +223,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
         } else {
-            $response->error = 'input';
+            if ($validation->unique_error()) {
+                $response->error = 'username';
+            } else if ($validation->invalid_email()) {
+                $response->error = 'email';
+            } else if ($validation->not_email_error()) {
+                $response->error = 'notemail';
+            } else {
+                $response->error = 'input';
+            }
             echo json_encode($response);
             exit();
         }

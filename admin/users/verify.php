@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 require_once '../users/init.php';
 require_once $abs_us_root.$us_url_root.'users/includes/template/prep.php';
 
-if(ipCheckBan()){Redirect::to($us_url_root.'usersc/scripts/banned.php');die();}
+if(ipCheckBan()){Redirect::to($abs_us_root);die();}
 $new=Input::get('new');
 if($new!=1) if($user->isLoggedIn()) $user->logout();
 
@@ -48,8 +48,8 @@ if(Input::exists('get')){
 		if($verify->data()->email_verified == 1 && $verify->data()->vericode == $vericode && $verify->data()->email_new == ""){
 			//email is already verified - Basically if the system already shows the email as verified and they click the link again, we're going to pass it regardless of the expiry because
 			//the hassle of telling people verification failed (after previously successful is worse than what could go wrong)
-			require $abs_us_root.$us_url_root.'users/views/_verify_success.php';
-
+			Redirect::to($abs_us_root);
+			exit();
 
 		}elseif($verify->data()->email_verified != 1 && $verify->data()->vericode_expiry == "0000-00-00 00:00:00"){
 			//in the unlikely event someone has a blank vericode expiry, we're going to generate a new one
@@ -57,7 +57,8 @@ if(Input::exists('get')){
 
 			echo lang("ERR_EMAIL_STR");
 			$verify->update(array('email_verified' => 0,'vericode' => randomstring(15),'vericode_expiry' => $vericode_expiry),$verify->data()->id);
-			require $abs_us_root.$us_url_root.'users/views/_verify_resend.php';
+			Redirect::to($abs_us_root);
+			exit();
 		}else{
 		if ($verify->exists() && $verify->data()->vericode == $vericode && (strtotime($verify->data()->vericode_expiry) - strtotime(date("Y-m-d H:i:s")) > 0)){
 			//check if this email account exists in the DB
@@ -66,7 +67,7 @@ if(Input::exists('get')){
 			$verify_success=TRUE;
 			logger($verify->data()->id,"User","Verification completed via vericode.");
 			$msg = lang("REDIR_EM_SUCC");
-			if($new==1){Redirect::to($us_url_root.'users/user_settings.php?msg=Email Updated Successfully');}
+			if($new==1){Redirect::to($abs_us_root);exit();}
 		}
 	}
 	}else{

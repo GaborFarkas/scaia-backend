@@ -272,8 +272,9 @@ class User
             'fname' => $this->_data->fname,
             'lname' => $this->_data->lname,
             'language' => $this->_data->language,
-            'emailVerified' => $this->_data->email_verified,
-            'admin' => hasPerm([2], $this->_data->id)
+            'emailVerified' => $this->_data->email_verified == 1,
+            'admin' => hasPerm([2], $this->_data->id),
+            'pwReset' => $this->_data->force_pr == 1
         ];
     }
 

@@ -42,7 +42,7 @@ if($user->isLoggedIn()) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $token = Input::get('csrf');
+  $token = $_POST['csrf'];
   if(!Token::check($token)){
     $response->error = 'token';
     echo json_encode($response);

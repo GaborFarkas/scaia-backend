@@ -22,7 +22,8 @@ class Validate
 	public
 	$_errors = [],
 	$_db     = null,
-	$_unique_err = false,
+	$_unique_un = false,
+	$_unique_email = false,
 	$_invalid_email = false,
 	$_not_email_err = false;
 
@@ -94,7 +95,11 @@ class Validate
 							$str1 = lang("VAL_DB");
 							if ($this->_db->count()) {
 								$this->addError(["{$display} $str {$display}",$item]);
-								$this->_unique_err = true;
+								if ($item === "username") {
+									$this->_unique_un = true;
+								} else if ($item === "email") {
+									$this->_unique_email = true;
+								}
 							}
 						} else {
 							$this->addError([$str1,$item]);
@@ -337,8 +342,12 @@ class Validate
 		return empty($this->_errors);
 	}
 
-	public function unique_error(){
-		return $this->_unique_err;
+	public function unique_un(){
+		return $this->_unique_un;
+	}
+
+	public function unique_email(){
+		return $this->_unique_email;
 	}
 
 	public function invalid_email(){

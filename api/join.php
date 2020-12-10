@@ -223,8 +223,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
         } else {
-            if ($validation->unique_error()) {
+            if ($validation->unique_un()) {
                 $response->error = 'username';
+            } else if ($validation->unique_email()) {
+                $response->error = 'emailexists';
             } else if ($validation->invalid_email()) {
                 $response->error = 'email';
             } else if ($validation->not_email_error()) {

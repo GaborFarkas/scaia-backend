@@ -28,6 +28,20 @@ if (ipCheckBan() || $user->isLoggedIn()) {
     die();
 }
 
+if($settings->allow_language == 0 || !isset($user) || !$user->isLoggedIn()){
+	if(!isset($_SESSION['us_lang'])){
+	$_SESSION['us_lang'] = $settings->default_language;
+}
+}else{
+	if(isset($user) && $user->isLoggedIn()){
+	$_SESSION['us_lang'] = $user->data()->language;
+	}else{
+	$_SESSION['us_lang'] = $settings->default_language;
+}
+}
+
+include $abs_us_root.$us_url_root.'users/lang/'.$_SESSION['us_lang'].".php";
+
 $response = new stdClass();
 
 if ($settings->registration == 0) {

@@ -72,7 +72,9 @@ if(Input::exists('get')){
 	}
 	}else{
 		$errors = $validation->errors();
+		Redirect::to($abs_us_root);exit();
 	}
+	Redirect::to($abs_us_root);exit();
 }
 
 ?>

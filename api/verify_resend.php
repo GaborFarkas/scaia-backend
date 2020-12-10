@@ -40,10 +40,10 @@ $email = $user->data()->email;
 
 $vericode=randomstring(15);
 $vericode_expiry=date("Y-m-d H:i:s",strtotime("+$settings->join_vericode_expiry hours",strtotime(date("Y-m-d H:i:s"))));
-$db->update('users',$fuser->data()->id,['vericode' => $vericode,'vericode_expiry' => $vericode_expiry]);
+$db->update('users',$user->data()->id,['vericode' => $vericode,'vericode_expiry' => $vericode_expiry]);
 //send the email
 $options = array(
-  'fname' => $fuser->data()->fname,
+  'fname' => $user->data()->fname,
   'email' => rawurlencode($email),
   'vericode' => $vericode,
   'join_vericode_expiry' => $settings->join_vericode_expiry
@@ -52,7 +52,7 @@ $encoded_email=rawurlencode($email);
 $subject = lang("EML_VER");
 $body =  email_body('_email_template_verify.php',$options);
 $email_sent=email($email,$subject,$body);
-logger($fuser->data()->id,"User","Requested a new verification email.");
+logger($user->data()->id,"User","Requested a new verification email.");
 if(!$email_sent){
     $errors[] = lang("ERR_EMAIL");
 }

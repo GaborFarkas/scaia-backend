@@ -117,7 +117,7 @@ function activeDropdown($View, $dropId, $Area = false){
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="<?=$us_url_root?>index.php"><img src="images/logo.png" alt="Logo"></a>
+        <a class="navbar-brand" href="<?=$us_url_root?>admin/users/admin"><img src="images/logo.png" alt="Logo"></a>
         <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
       </div>
 
@@ -127,7 +127,6 @@ function activeDropdown($View, $dropId, $Area = false){
             <a href="admin.php"> <i class="menu-icon fa fa-dashboard"></i><?=lang("BE_DASH")?> </a>
           </li>
           <!-- <h3 class="menu-title">Settings</h3> -->
-          <?php if(hasPerm([2],$user->data()->id)){?>
           <li class="menu-item-has-children dropdown <?=activeDropdown($view, 'settings')[0];?>">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="<?=activeDropdown($view, 'settings')[1];?>"> <i class="menu-icon fa fa-gear"></i><?=lang("BE_SETTINGS")?></a>
             <ul class="sub-menu children dropdown-menu <?=activeDropdown($view, 'settings')[0];?>">
@@ -139,7 +138,6 @@ function activeDropdown($View, $dropId, $Area = false){
               <?php if(in_array($user->data()->id, $master_account)){?> <li <?=($view == 'access') ? 'class="active"' : '' ;?>><i class="menu-icon fa fa-file-code-o"></i><a href="admin.php?view=access"><?=lang("BE_DASH_ACC")?></a></li><?php } ?>
             </ul>
           </li>
-        <?php } //end settings menu admin only?>
           <li class="menu-item-has-children dropdown <?=activeDropdown($view, 'tools')[0];?>">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="<?=activeDropdown($view, 'tools')[1];?>"> <i class="menu-icon fa fa-wrench"></i><?=lang("BE_TOOLS")?></a>
             <ul class="sub-menu children dropdown-menu <?=activeDropdown($view, 'tools')[0];?>">
@@ -195,7 +193,7 @@ function activeDropdown($View, $dropId, $Area = false){
             <?php if(file_exists($abs_us_root.$us_url_root.'usersc/includes/admin_menu.php')){
               include($abs_us_root.$us_url_root.'usersc/includes/admin_menu.php');
             }?>
-            <a href="<?=$us_url_root?>index.php"><i class="menu-icon fa fa-home"></i>Visit Homepage</a>
+            <a href="<?=$abs_us_root?>"><i class="menu-icon fa fa-home"></i>Visit Homepage</a>
             <a href="<?=$us_url_root?>users/account.php"><i class="menu-icon fa fa-qq"></i>Your Account</a>
             <a href="<?=$us_url_root?>users/logout.php"><i class="menu-icon fa fa-hand-peace-o"></i>Logout</a>
 

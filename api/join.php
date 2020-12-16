@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
 ini_set('allow_url_fopen', 1);
-ini_set('default_charset', 'UTF-8');
 require_once '../admin/users/init.php';
 header('Content-Type: application/json;charset=utf-8');
 $db = DB::getInstance();
@@ -183,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $user = new User();
                 $join_date = date('Y-m-d H:i:s');
                 $params = [
-                    'fname' => ucfirst(html_entity_decode(Input::get('fname'))),
+                    'fname' => Input::get('fname'),
                     'email' => $email,
                     'username' => $username,
                     'vericode' => $vericode,
@@ -202,8 +201,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // echo "Trying to create user";
                     $fields = [
                         'username' => $username,
-                        'fname' => ucfirst(html_entity_decode(Input::get('fname'))),
-                        'lname' => ucfirst(html_entity_decode(Input::get('lname'))),
+                        'fname' => ucfirst(Input::get('fname')),
+                        'lname' => ucfirst(Input::get('lname')),
                         'email' => Input::get('email'),
                         'password' => password_hash(Input::get('password', true), PASSWORD_BCRYPT, ['cost' => 12]),
                         'permissions' => 1,

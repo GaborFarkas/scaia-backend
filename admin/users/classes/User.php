@@ -274,7 +274,7 @@ class User
             'language' => $this->_data->language,
             'emailVerified' => $this->_data->email_verified == 1,
             'admin' => hasPerm([2], $this->_data->id),
-            'pwReset' => $this->isPwResetNeeded()
+            'pwReset' => $this->_data->force_pr == 1
         ];
     }
 

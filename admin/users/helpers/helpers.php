@@ -343,3 +343,10 @@ if (!function_exists('safefilerewrite')) {
     }
   }
 }
+
+if (!function_exists('json')) {
+  function json($string)
+  {
+    return json_encode($string, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+  }
+}

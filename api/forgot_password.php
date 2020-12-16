@@ -19,6 +19,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 require_once '../admin/users/init.php';
+header('Content-Type: application/json;charset=utf-8');
 $db = DB::getInstance();
 $settings = $db->query("SELECT * FROM settings")->first();
 
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if(Input::exists()){
     if(!Token::check($token)){
       $response->error = 'token';
-      echo json_encode($response);
+      echo json($response);
       exit();
     }
 
@@ -84,24 +85,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           logger($fuser->data()->id,"User","Requested password reset.");
           if(!$email_sent){
             $response->error = 'server';
-            echo json_encode($response);
+            echo json($response);
             exit();
           }
       }else{
         $response->error = 'user';
-        echo json_encode($response);
+        echo json($response);
         exit();
       }
     }else{
         //display the errors
         $response->error = 'input';
-        echo json_encode($response);
+        echo json($response);
         exit();
     }
   }
 
 } else {
   $response->token = Token::generate();
-  echo json_encode($response);
+  echo json($response);
   exit();
 }

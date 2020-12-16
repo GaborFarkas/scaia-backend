@@ -19,6 +19,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 require_once '../admin/users/init.php';
+header('Content-Type: application/json;charset=utf-8');
 $db = DB::getInstance();
 $settings = $db->query("SELECT * FROM settings")->first();
 
@@ -38,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$token = Input::get('csrf');
 	if(!Token::check($token)) {
 		$response->error = 'token';
-		echo json_encode($response);
+		echo json($response);
 		exit();
 	}
 
@@ -54,13 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		if (!$ruser->exists()) {
 			$response->error = 'server';
-			echo json_encode($response);
+			echo json($response);
 			exit();
 		}
 
 		if ($ruser->data()->vericode != $vericode || (strtotime($ruser->data()->vericode_expiry) - strtotime(date("Y-m-d H:i:s")) <= 0)) {
 			$response->error = 'expired';
-			echo json_encode($response);
+			echo json($response);
 			exit();
 		}
 	}
@@ -95,13 +96,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		}
 	} else {
 		$response->error = 'input';
-		echo json_encode($response);
+		echo json($response);
 		exit();
 	}
 } else {
 	$response->token = Token::generate();
 	$response->minPwLength = $settings->min_pw;
     $response->maxPwLength = $settings->max_pw;
-	echo json_encode($response);
+	echo json($response);
 	exit();
 }

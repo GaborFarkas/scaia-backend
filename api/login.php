@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ini_set("allow_url_fopen", 1);
 if(isset($_SESSION)){session_destroy();}
 require_once '../admin/users/init.php';
+header('Content-Type: application/json;charset=utf-8');
 $db = DB::getInstance();
 $settings = $db->query("SELECT * FROM settings")->first();
 $response = new stdClass();
@@ -37,7 +38,7 @@ if($user->isLoggedIn()) {
   } else {
     $response->userData = $user->apiData();
   }
-  echo json_encode($response);
+  echo json($response);
   exit();
 }
 
@@ -45,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $token = $_POST['csrf'];
   if(!Token::check($token)){
     $response->error = 'token';
-    echo json_encode($response);
+    echo json($response);
     exit();
   }
 
@@ -81,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$res['success']) {
       // What happens when the reCAPTCHA is not properly set up
       $response->error = 'recaptcha';
-      echo json_encode($response);
+      echo json($response);
       exit();
     }else{
       $reCaptchaValid=TRUE;
@@ -100,12 +101,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $login = $user->loginEmail(Input::get('username'), trim(Input::get('password')), $remember);
       if ($login) {
         $response->userData = $user->apiData();
-        echo json_encode($response);
+        echo json($response);
         exit();
       } else {
         logger("0","Login Fail","A failed login on login.php");
         $response->error = 'input';
-        echo json_encode($response);
+        echo json($response);
         exit();
       }
     }
@@ -113,6 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
   $response->token = Token::generate();
   $response->recaptcha = $settings->recaptcha != 0 ? $settings->recap_public : null;
-  echo json_encode($response);
+  echo json($response);
   exit();
 }

@@ -20,7 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
 ini_set('allow_url_fopen', 1);
+ini_set('default_charset', 'UTF-8');
 require_once '../admin/users/init.php';
+header('Content-Type: application/json;charset=utf-8');
 $db = DB::getInstance();
 $settings = $db->query("SELECT * FROM settings")->first();
 
@@ -46,7 +48,7 @@ $response = new stdClass();
 
 if ($settings->registration == 0) {
     $response->registrationDisabled = true;
-    echo json_encode($response);
+    echo json($response);
     exit();
 }
 
@@ -76,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_POST['csrf'];
         if (!Token::check($token)) {
             $response->error = 'token';
-            echo json_encode($response);
+            echo json($response);
             exit();
         }
     
@@ -167,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (!$res['success']) {
                     // What happens when the reCAPTCHA is not properly set up
                     $response->error = 'recaptcha';
-                    echo json_encode($response);
+                    echo json($response);
                     exit();
                 } else {
                     $reCaptchaValid = true;
@@ -181,7 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $user = new User();
                 $join_date = date('Y-m-d H:i:s');
                 $params = [
-                    'fname' => Input::get('fname'),
+                    'fname' => ucfirst(html_entity_decode(Input::get('fname'))),
                     'email' => $email,
                     'username' => $username,
                     'vericode' => $vericode,
@@ -200,8 +202,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // echo "Trying to create user";
                     $fields = [
                         'username' => $username,
-                        'fname' => ucfirst(Input::get('fname')),
-                        'lname' => ucfirst(Input::get('lname')),
+                        'fname' => ucfirst(html_entity_decode(Input::get('fname'))),
+                        'lname' => ucfirst(html_entity_decode(Input::get('lname'))),
                         'email' => Input::get('email'),
                         'password' => password_hash(Input::get('password', true), PASSWORD_BCRYPT, ['cost' => 12]),
                         'permissions' => 1,
@@ -218,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $theNewId = $user->create($fields);
                 } catch (Exception $e) {
                     $response->error = 'server';
-                    echo json_encode($response);
+                    echo json($response);
                     die();
                 }
                 if ($form_valid == true) { //this allows the plugin hook to kill the post but it must delete the created user
@@ -232,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
 
                     $response->error = '';
-                    echo json_encode($response);
+                    echo json($response);
                     exit();
                 }
             }
@@ -248,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $response->error = 'input';
             }
-            echo json_encode($response);
+            echo json($response);
             exit();
         }
     } //Input exists
@@ -259,6 +261,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response->maxUserLength = $settings->max_un;
     $response->minPwLength = $settings->min_pw;
     $response->maxPwLength = $settings->max_pw;
-    echo json_encode($response);
+    echo json($response);
     exit();
 }

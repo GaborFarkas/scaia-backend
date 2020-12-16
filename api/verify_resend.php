@@ -25,7 +25,7 @@ $query = $db->query("SELECT * FROM email");
 $results = $query->first();
 $act = $results->email_act;
 
-if (ipCheckBan() || !$user->isLoggedIn() || $act!=1) {
+if (ipCheckBan() || !$user->isLoggedIn() || $act!=1 || $user->isBanned()) {
     die();
 }
 

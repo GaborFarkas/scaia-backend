@@ -274,7 +274,7 @@ class User
             'language' => $this->_data->language,
             'emailVerified' => $this->_data->email_verified == 1,
             'admin' => hasPerm([2], $this->_data->id),
-            'pwReset' => $this->_data->force_pr == 1
+            'pwReset' => $this->isPwResetNeeded()
         ];
     }
 
@@ -286,6 +286,11 @@ class User
     public function isLoggedIn()
     {
         return $this->_isLoggedIn;
+    }
+
+    public function isPwResetNeeded()
+    {
+        $this->_data->force_pr == 1;
     }
 
     public function notLoggedInRedirect($location)

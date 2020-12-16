@@ -64,6 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($validation->passed()){
       $fuser = new User($email);
       if($fuser->exists()){
+        if ($fuser->isBanned()) {
+          die();
+        }
         $vericode=randomstring(15);
         $vericode_expiry=date("Y-m-d H:i:s",strtotime("+$settings->reset_vericode_expiry minutes",strtotime(date("Y-m-d H:i:s"))));
         $db->update('users',$fuser->data()->id,['vericode' => $vericode,'vericode_expiry' => $vericode_expiry]);

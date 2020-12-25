@@ -290,7 +290,11 @@ class User
 
     public function isPwResetNeeded()
     {
-        $this->_data->force_pr == 1;
+        return $this->_data->force_pr == 1;
+    }
+
+    public function isNotVerified() {
+        return $this->_data->email_verified == 0;
     }
 
     public function notLoggedInRedirect($location)

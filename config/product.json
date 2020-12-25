@@ -1,0 +1,297 @@
+[{
+    "name": "Crop status reports",
+    "type": "category",
+    "icon": "",
+    "items": [
+        {
+            "name": "Winter Wheat",
+            "type": "category",
+            "icon": "",
+            "items": [
+                {
+                    "id": "111P00",
+                    "name": "Soil wetness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "111P01",
+                    "name": "Germination",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "111P02",
+                    "name": "Plant development",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "111P03",
+                    "name": "Ripeness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "111P05",
+                    "name": "Weed detection",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "harvest date",
+                            "type": "date"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Winter Barley",
+            "type": "category",
+            "icon": "",
+            "items": [
+                {
+                    "id": "113P00",
+                    "name": "Soil wetness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "113P01",
+                    "name": "Germination",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "113P02",
+                    "name": "Plant development",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "113P03",
+                    "name": "Ripeness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "113P05",
+                    "name": "Weed detection",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "harvest date",
+                            "type": "date"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rapeseed",
+            "type": "category",
+            "icon": "",
+            "items": [
+                {
+                    "id": "115P00",
+                    "name": "Soil wetness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "115P01",
+                    "name": "Germination",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "115P02",
+                    "name": "Plant development",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "115P03",
+                    "name": "Ripeness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "115P04",
+                    "name": "Biomass estimation",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "115P05",
+                    "name": "Weed detection",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "harvest date",
+                            "type": "date"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Corn",
+            "type": "category",
+            "icon": "",
+            "items": [
+                {
+                    "id": "129P00",
+                    "name": "Soil wetness",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": null
+                },
+                {
+                    "id": "129P01",
+                    "name": "Germination",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "129P02",
+                    "name": "Plant development",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "sowing date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "id": "129P05",
+                    "name": "Weed detection",
+                    "type": "process",
+                    "icon": "",
+                    "inputs": [
+                        {
+                            "name": "harvest date",
+                            "type": "date"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "name": "Crop damages",
+    "type": "category",
+    "icon": "",
+    "items": [
+        {
+            "id": "222P24",
+            "name": "Drought detection",
+            "type": "process",
+            "icon": "",
+            "inputs": [
+                {
+                    "name": "drought period",
+                    "type": "interval"
+                }
+            ]
+        },
+        {
+            "id": "222P22",
+            "name": "Inland Excess Water",
+            "type": "process",
+            "icon": "",
+            "inputs": [
+                {
+                    "name": "flooding period",
+                    "type": "interval"
+                }
+            ]
+        },
+        {
+            "id": "222P23",
+            "name": "Snow detection",
+            "type": "process",
+            "icon": "",
+            "inputs": [
+                {
+                    "name": "snowing date",
+                    "type": "date"
+                }
+            ]
+        },
+        {
+            "id": "222P21",
+            "name": "Frost detection",
+            "type": "process",
+            "icon": "",
+            "inputs": [
+                {
+                    "name": "frost date",
+                    "type": "date"
+                }
+            ]
+        }
+    ]
+},
+{
+    "id": "hpcP00",
+    "name": "HPC-based",
+    "type": "process",
+    "icon": "",
+    "inputs": null
+}]

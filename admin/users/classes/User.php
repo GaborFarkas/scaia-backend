@@ -293,8 +293,8 @@ class User
         return $this->_data->force_pr == 1;
     }
 
-    public function isNotVerified() {
-        return $this->_data->email_verified == 0;
+    public function isVerified() {
+        return $this->_data->email_verified == 1;
     }
 
     public function notLoggedInRedirect($location)
@@ -326,5 +326,13 @@ class User
         if (!$this->_db->update('users', $id, $fields)) {
             throw new Exception('There was a problem updating.');
         }
+    }
+
+    public function isEligible() {
+        return hasPerm([4], $this->_data->id);
+    }
+
+    public function canServed() {
+        return !ipCheckBan() && $this->isLoggedIn() && !$this->isBanned() || !$this->isPwResetNeeded() || $this->isVerified();
     }
 }

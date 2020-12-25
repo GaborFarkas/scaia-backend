@@ -2,14 +2,10 @@
 
 require_once '../admin/users/init.php';
 
-if (ipCheckBan() || !$user->isLoggedIn()) {
-    die();
-}
-
 header('Content-Type: application/json;charset=utf-8');
 $response = new stdClass();
 
-if ($user->isBanned() || $user->isPwResetNeeded() || $user->isNotVerified()) {
+if (!$user->canServed()) {
     $response->error = 'user';
     echo json($response);
     exit();

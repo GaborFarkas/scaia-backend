@@ -10,7 +10,7 @@ if (!$user->canServed()) {
 }
 if (!$user->isEligible()) {
     http_response_code(403);
-    die('You are a teapot!');
+    die();
 }
 
 

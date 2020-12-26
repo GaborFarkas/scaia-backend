@@ -13,5 +13,6 @@ if (!$user->isEligible()) {
     die();
 }
 
+echo file_get_contents('../config/basemap.geojson');
 
 ?>

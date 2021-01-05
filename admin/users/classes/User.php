@@ -273,7 +273,7 @@ class User
             'lname' => $this->_data->lname,
             'language' => $this->_data->language,
             'emailVerified' => $this->_data->email_verified == 1,
-            'admin' => hasPerm([2], $this->_data->id),
+            'admin' => hasPerm([2, 3], $this->_data->id),
             'pwReset' => $this->_data->force_pr == 1
         ];
     }
@@ -329,7 +329,7 @@ class User
     }
 
     public function isEligible() {
-        return hasPerm([4], $this->_data->id);
+        return hasPerm([2, 3, 4], $this->_data->id);
     }
 
     public function canServed() {

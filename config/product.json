@@ -5,25 +5,25 @@
     "items": [{
         "name": "Crop status reports",
         "type": "category",
-        "icon": "",
+        "icon": "fas fa-leaf",
         "items": [
             {
                 "name": "Winter Wheat",
                 "type": "category",
-                "icon": "",
+                "icon": "fas fa-leaf",
                 "items": [
                     {
                         "id": "111P00",
                         "name": "Soil wetness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tint",
                         "inputs": null
                     },
                     {
                         "id": "111P01",
                         "name": "Germination",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-seedling",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -35,7 +35,7 @@
                         "id": "111P02",
                         "name": "Plant development",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fab fa-pagelines",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -47,14 +47,14 @@
                         "id": "111P03",
                         "name": "Ripeness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tractor",
                         "inputs": null
                     },
                     {
                         "id": "111P05",
                         "name": "Weed detection",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-spray-can",
                         "inputs": [
                             {
                                 "name": "harvest date",
@@ -67,20 +67,20 @@
             {
                 "name": "Winter Barley",
                 "type": "category",
-                "icon": "",
+                "icon": "fas fa-leaf",
                 "items": [
                     {
                         "id": "113P00",
                         "name": "Soil wetness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tint",
                         "inputs": null
                     },
                     {
                         "id": "113P01",
                         "name": "Germination",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-seedling",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -92,7 +92,7 @@
                         "id": "113P02",
                         "name": "Plant development",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fab fa-pagelines",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -104,14 +104,14 @@
                         "id": "113P03",
                         "name": "Ripeness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tractor",
                         "inputs": null
                     },
                     {
                         "id": "113P05",
                         "name": "Weed detection",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-spray-can",
                         "inputs": [
                             {
                                 "name": "harvest date",
@@ -124,20 +124,20 @@
             {
                 "name": "Rapeseed",
                 "type": "category",
-                "icon": "",
+                "icon": "fas fa-leaf",
                 "items": [
                     {
                         "id": "115P00",
                         "name": "Soil wetness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tint",
                         "inputs": null
                     },
                     {
                         "id": "115P01",
                         "name": "Germination",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-seedling",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -149,7 +149,7 @@
                         "id": "115P02",
                         "name": "Plant development",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fab fa-pagelines",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -161,21 +161,21 @@
                         "id": "115P03",
                         "name": "Ripeness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tractor",
                         "inputs": null
                     },
                     {
                         "id": "115P04",
                         "name": "Biomass estimation",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tree",
                         "inputs": null
                     },
                     {
                         "id": "115P05",
                         "name": "Weed detection",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-spray-can",
                         "inputs": [
                             {
                                 "name": "harvest date",
@@ -188,20 +188,20 @@
             {
                 "name": "Corn",
                 "type": "category",
-                "icon": "",
+                "icon": "fas fa-leaf",
                 "items": [
                     {
                         "id": "129P00",
                         "name": "Soil wetness",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-tint",
                         "inputs": null
                     },
                     {
                         "id": "129P01",
                         "name": "Germination",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-seedling",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -213,7 +213,7 @@
                         "id": "129P02",
                         "name": "Plant development",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fab fa-pagelines",
                         "inputs": [
                             {
                                 "name": "sowing date",
@@ -225,7 +225,7 @@
                         "id": "129P05",
                         "name": "Weed detection",
                         "type": "process",
-                        "icon": "",
+                        "icon": "fas fa-spray-can",
                         "inputs": [
                             {
                                 "name": "harvest date",
@@ -240,13 +240,13 @@
     {
         "name": "Crop damages",
         "type": "category",
-        "icon": "",
+        "icon": "fas fa-cloud-sun-rain",
         "items": [
             {
                 "id": "222P24",
                 "name": "Drought detection",
                 "type": "process",
-                "icon": "",
+                "icon": "fas fa-sun",
                 "inputs": [
                     {
                         "name": "drought period",
@@ -258,7 +258,7 @@
                 "id": "222P22",
                 "name": "Inland Excess Water",
                 "type": "process",
-                "icon": "",
+                "icon": "fas fa-water",
                 "inputs": [
                     {
                         "name": "flooding period",
@@ -270,7 +270,7 @@
                 "id": "222P23",
                 "name": "Snow detection",
                 "type": "process",
-                "icon": "",
+                "icon": "fas fa-snowflake",
                 "inputs": [
                     {
                         "name": "snowing date",
@@ -282,7 +282,7 @@
                 "id": "222P21",
                 "name": "Frost detection",
                 "type": "process",
-                "icon": "",
+                "icon": "fas fa-snowflake",
                 "inputs": [
                     {
                         "name": "frost date",
@@ -296,7 +296,7 @@
         "id": "hpcP00",
         "name": "HPC-based",
         "type": "process",
-        "icon": "",
+        "icon": "fas fa-server",
         "inputs": null
     }]
 }

@@ -1,18 +1,15 @@
 {
     "555P01": {
         "name": "Management zones",
-        "availability": "11",
         "layers": [{
             "id": "555P01_V1",
             "type": "vector",
-            "name": "555P01VS2_SMnZn_20201224",
-            "path": "555P01VS2_SMnZn_20201224.geojson"
+            "name": "555P01VS2_SMnZn_20201224"
         },
         {
             "id": "555P01_V2",
             "type": "vector",
-            "name": "555P01VS2_PMnZn_20201224",
-            "path": "555P01VS2_PMnZn_20201224.geojson"
+            "name": "555P01VS2_PMnZn_20201224"
         }]
     }
 }

@@ -13,6 +13,15 @@ if (!$user->isEligible()) {
     die();
 }
 
-echo file_get_contents('../config/basemap.geojson');
+if (Input::get('id')) {
+    $id = Input::get('id');
+
+    //TODO: Query the DB for a product matching the ID.
+    http_response_code(404);
+    die();
+} else {
+    http_response_code(404);
+    die();
+}
 
 ?>

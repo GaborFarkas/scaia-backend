@@ -293,6 +293,13 @@
         ]
     },
     {
+        "id": "555P01",
+        "name": "Management Zones",
+        "type": "map",
+        "icon": "fas fa-tractor",
+        "inputs": null
+    },
+    {
         "id": "hpcP00",
         "name": "HPC-based",
         "type": "process",

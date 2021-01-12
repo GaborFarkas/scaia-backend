@@ -1,0 +1,32 @@
+{
+    "type": "categorized",
+    "column": "C_cropID",
+    "categories": [{
+        "value": "111",
+        "legend": "búza",
+        "fill": "#de8e42",
+        "stroke": "#000000",
+        "stroke-width": "1"
+    },
+    {
+        "value": "113",
+        "legend": "árpa",
+        "fill": "#f5ebcc",
+        "stroke": "#000000",
+        "stroke-width": "1"
+    },
+    {
+        "value": "115",
+        "legend": "repce",
+        "fill": "#95563b",
+        "stroke": "#000000",
+        "stroke-width": "1"
+    },
+    {
+        "value": "129",
+        "legend": "takarmány kukorica",
+        "fill": "#643a28",
+        "stroke": "#000000",
+        "stroke-width": "1"
+    }]
+}

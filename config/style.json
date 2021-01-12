@@ -1,0 +1,66 @@
+{
+    "555P01_V1": {
+        "type": "categorized",
+        "column": "quality",
+        "categories": [{
+            "value": "átlagos",
+            "legend": "átlagos",
+            "fill": "#de8e42",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "igen gyenge",
+            "legend": "igen gyenge",
+            "fill": "#f5ebcc",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "jó",
+            "legend": "jó",
+            "fill": "#95563b",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "jobb",
+            "legend": "jobb",
+            "fill": "#643a28",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        }]
+    },
+    "555P01_V2": {
+        "type": "categorized",
+        "column": "quality",
+        "categories": [{
+            "value": "átlagos",
+            "legend": "átlagos",
+            "fill": "#e1f543",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "gyenge",
+            "legend": "gyenge",
+            "fill": "#ba4646",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "jobb",
+            "legend": "jobb",
+            "fill": "#348b2a",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        },
+        {
+            "value": "Kissé átlag feletti",
+            "legend": "kissé átlag feletti",
+            "fill": "#7dde0d",
+            "stroke": "#000000",
+            "stroke-width": "1"
+        }]
+    }
+}

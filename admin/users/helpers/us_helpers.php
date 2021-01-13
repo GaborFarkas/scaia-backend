@@ -1341,3 +1341,47 @@ if (!function_exists('echodatetime')) {
           return json_last_error() == JSON_ERROR_NONE;
       }
   }
+
+  if (!function_exists('fetchHelpCards')) {
+      function fetchHelpCards() {
+        $db = DB::getInstance();
+        $query = $db->query('SELECT * FROM help');
+        $results = $query->results();
+
+        return $results;
+      }
+  }
+
+  if (!function_exists('getHelpCategories')) {
+      function getHelpCategories() {
+          $prods = json_decode(file_get_contents('../../config/product.json'));
+          $cats = new stdClass();
+
+          createHelpGraph($prods, $cats);
+          return $cats;
+      }
+  }
+
+  if (!function_exists('createHelpGraph')) {
+      function createHelpGraph($node, $map) {
+          if ($node->items && is_array($node->items)) {
+              foreach ($node->items as $item) {
+                  $item->prev = $node;
+
+                  if ($item->id) {
+                    $id = $item->id;
+                    $name = $item->name;
+                    $tmp = $item;
+                    while ($tmp->prev) {
+                        $tmp = $tmp->prev;
+                        $name = $tmp->name.' > '.$name;
+                    }
+
+                    $map->$id = $name;
+                  } else {
+                    createHelpGraph($item, $map);
+                  }
+              }
+          }
+      }
+  }

@@ -1362,6 +1362,16 @@ if (!function_exists('echodatetime')) {
     }
 }
 
+if (!function_exists('fetchHelpCardsForCat')) {
+    function fetchHelpCardsForCat($id) {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM help WHERE category = ?', [$id]);
+      $results = $query->results();
+
+      return $results;
+    }
+}
+
 if (!function_exists('deleteHelpCards')) {
     function deleteHelpCards($cards)
     {

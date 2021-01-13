@@ -1352,6 +1352,30 @@ if (!function_exists('echodatetime')) {
       }
   }
 
+  if (!function_exists('fetchHelpCard')) {
+    function fetchHelpCard($id) {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM help WHERE id = ?', [$id]);
+      $results = $query->first();
+
+      return $results;
+    }
+}
+
+if (!function_exists('deleteHelpCards')) {
+    function deleteHelpCards($cards)
+    {
+        $db = DB::getInstance();
+        $i = 0;
+        foreach ($cards as $id) {
+            $query = $db->query('DELETE FROM help WHERE id = ?', [$id]);
+            ++$i;
+        }
+
+        return $i;
+    }
+}
+
   if (!function_exists('getHelpCategories')) {
       function getHelpCategories() {
           $prods = json_decode(file_get_contents('../../config/product.json'));
@@ -1364,15 +1388,15 @@ if (!function_exists('echodatetime')) {
 
   if (!function_exists('createHelpGraph')) {
       function createHelpGraph($node, $map) {
-          if ($node->items && is_array($node->items)) {
+          if (isset($node->items) && is_array($node->items)) {
               foreach ($node->items as $item) {
                   $item->prev = $node;
 
-                  if ($item->id) {
+                  if (isset($item->id)) {
                     $id = $item->id;
                     $name = $item->name;
                     $tmp = $item;
-                    while ($tmp->prev) {
+                    while (isset($tmp->prev)) {
                         $tmp = $tmp->prev;
                         $name = $tmp->name.' > '.$name;
                     }
@@ -1385,3 +1409,18 @@ if (!function_exists('echodatetime')) {
           }
       }
   }
+
+  if (!function_exists('helpCardExists')) {
+    //Check if a help card exists in the DB
+    function helpCardExists($id)
+    {
+        $db = DB::getInstance();
+        $query = $db->query('SELECT * FROM help WHERE id = ?', [$id]);
+        $num_returns = $query->count();
+        if ($num_returns > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

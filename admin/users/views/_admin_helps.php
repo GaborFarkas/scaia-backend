@@ -19,8 +19,6 @@ $errors = $successes = [];
 $form_valid = true;
 $validation = new Validate();
 if (!empty($_POST)) {
-    includeHook($hooks, 'post');
-    //Manually Add User
     if (!empty($_POST['addHelp'])) {
         $cat = Input::get('category');
         $title = Input::get('title');
@@ -81,7 +79,6 @@ if (!empty($_POST)) {
     <div class="col-12 mb-2">
     <h2>Manage Help cards</h2>
     <?=resultBlock($errors, $successes); ?>
-    <?php includeHook($hooks, 'pre'); ?>
     <div class="w-100 text-right">
     <button class="btn btn-outline-dark" data-toggle="modal" data-target="#addhelp"><i class="fa fa-plus"></i> Add Help card</button>
     </div>
@@ -107,7 +104,6 @@ if (!empty($_POST)) {
                 echo $categories->$catId;
               ?></a></td>
               <td><a class="nounderline text-dark" href='admin.php?view=help&id=<?=$v1->id; ?>'><?=$v1->title; ?></a></td>
-              <?php includeHook($hooks, 'bottom'); ?>
             </tr>
           <?php
           } ?>
@@ -147,9 +143,9 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group" id="body-group">
               <label>Text body</label>
-              <textarea class="form-control" name="body" id="body" rows="10" value="<?php if (!$form_valid && !empty($_POST)) {
+              <textarea class="form-control" name="body" id="body" rows="10" required autocomplete="off"><?php if (!$form_valid && !empty($_POST)) {
               echo $body;
-          } ?>" required autocomplete="off"></textarea>
+          } ?></textarea>
               </div>
             </div>
             <div class="modal-footer">

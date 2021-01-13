@@ -3,6 +3,12 @@
     "type": "category",
     "icon": "",
     "items": [{
+        "name": "General",
+        "type": "help",
+        "icon": "fas fa-question-circle",
+        "id": "general"
+    },
+    {
         "name": "Crop status reports",
         "type": "category",
         "icon": "fas fa-leaf",
@@ -300,10 +306,9 @@
         "inputs": null
     },
     {
-        "id": "hpcP00",
         "name": "HPC-based",
-        "type": "process",
+        "type": "category",
         "icon": "fas fa-server",
-        "inputs": null
+        "items": null
     }]
 }

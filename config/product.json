@@ -299,16 +299,38 @@
         ]
     },
     {
-        "id": "555P01",
         "name": "Management Zones",
-        "type": "map",
+        "type": "category",
         "icon": "fas fa-tractor",
-        "inputs": null
+        "items": [
+            {
+                "id": "555P01",
+                "name": "Crop pattern based zones",
+                "type": "map",
+                "icon": "fas fa-tractor",
+                "inputs": null
+            },
+            {
+                "id": "555P02",
+                "name": "Soil pattern based zones",
+                "type": "map",
+                "icon": "fas fa-tractor",
+                "inputs": null
+            }
+        ]
     },
     {
         "name": "HPC-based",
         "type": "category",
         "icon": "fas fa-server",
-        "items": null
+        "items": [
+            {
+                "id": "hpcP00",
+                "name": "Classification",
+                "type": "process",
+                "icon": "fas fa-server",
+                "inputs": null
+            }
+        ]
     }]
 }

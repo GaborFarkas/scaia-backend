@@ -4,7 +4,7 @@
         "layers": [{
             "id": "555P01_V1",
             "type": "vector",
-            "name": "555P01VS2_PMnZn_20201224"
+            "name": "Crop pattern based zones"
         }]
     },
     "555P02": {
@@ -12,7 +12,7 @@
         "layers": [{
             "id": "555P02_V1",
             "type": "vector",
-            "name": "555P01VS2_SMnZn_20201224"
+            "name": "Soil pattern based zones"
         }]
     }
 }

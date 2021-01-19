@@ -6,42 +6,42 @@
             "value": 111,
             "legend": "búza",
             "style": {
-                "fill": "#de8e42",
+                "fill": "#0003fc",
                 "stroke": "#000000",
-                "stroke-width": "1"
+                "strokeWidth": 1
             }
         },
         {
             "value": 113,
             "legend": "árpa",
             "style": {
-                "fill": "#f5ebcc",
+                "fill": "#f3cfb9",
                 "stroke": "#000000",
-                "stroke-width": "1"
+                "strokeWidth": 1
             }
         },
         {
             "value": 115,
             "legend": "repce",
             "style": {
-                "fill": "#95563b",
+                "fill": "#fffe02",
                 "stroke": "#000000",
-                "stroke-width": "1"
+                "strokeWidth": 1
             }
         },
         {
             "value": 129,
             "legend": "takarmány kukorica",
             "style": {
-                "fill": "#643a28",
+                "fill": "#ff0100",
                 "stroke": "#000000",
-                "stroke-width": "1"
+                "strokeWidth": 1
             }
         }
     ],
     "default": {
         "fill": "#afafaf",
         "stroke": "#000000",
-        "stroke-width": "1"
+        "strokeWidth": 1
     }
 }

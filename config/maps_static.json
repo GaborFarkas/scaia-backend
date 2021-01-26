@@ -2,17 +2,19 @@
     "555P01": {
         "name": "Crop pattern based zones",
         "layers": [{
-            "id": "555P01_V1",
-            "type": "vector",
-            "name": "Crop pattern based zones"
+            "id": "555P01_R1",
+            "type": "raster",
+            "name": "Crop pattern based zones",
+            "mapfile": "555P01.map"
         }]
     },
     "555P02": {
         "name": "Soil pattern based zones",
         "layers": [{
-            "id": "555P02_V1",
-            "type": "vector",
-            "name": "Soil pattern based zones"
+            "id": "555P02_R1",
+            "type": "raster",
+            "name": "Soil pattern based zones",
+            "mapfile": "555P02.map"
         }]
     }
 }

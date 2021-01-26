@@ -1,84 +1,102 @@
 {
-    "555P02_V1": {
+    "555P02_R1": {
         "type": "categorized",
         "column": "quality",
         "categories": [
             {
-                "value": "átlagos",
-                "legend": "átlagos",
+                "value": "leggyengébb",
+                "legend": "leggyengébb",
                 "style": {
-                    "fill": "#de8e42",
+                    "fill": "#ffffd4",
                     "stroke": "#000000",
-                    "strokeWidth": 1
-                }
-            },
-            {
-                "value": "igen gyenge",
-                "legend": "igen gyenge",
-                "style": {
-                    "fill": "#f5ebcc",
-                    "stroke": "#000000",
-                    "strokeWidth": 1
-                }
-            },
-            {
-                "value": "jó",
-                "legend": "jó",
-                "style": {
-                    "fill": "#95563b",
-                    "stroke": "#000000",
-                    "strokeWidth": 1
-                }
-            },
-            {
-                "value": "jobb",
-                "legend": "jobb",
-                "style": {
-                    "fill": "#643a28",
-                    "stroke": "#000000",
-                    "strokeWidth": 1
-                }
-            }
-        ]
-    },
-    "555P01_V1": {
-        "type": "categorized",
-        "column": "quality",
-        "categories": [
-            {
-                "value": "átlagos",
-                "legend": "átlagos",
-                "style": {
-                    "fill": "#e1f543",
-                    "stroke": "#000000",
-                    "strokeWidth": 1
+                    "strokeWidth": 0
                 }
             },
             {
                 "value": "gyenge",
                 "legend": "gyenge",
                 "style": {
-                    "fill": "#ba4646",
+                    "fill": "#fed98e",
                     "stroke": "#000000",
-                    "strokeWidth": 1
+                    "strokeWidth": 0
                 }
             },
             {
-                "value": "jobb",
-                "legend": "jobb",
+                "value": "átlagos",
+                "legend": "átlagos",
                 "style": {
-                    "fill": "#348b2a",
+                    "fill": "#fe9929",
                     "stroke": "#000000",
-                    "strokeWidth": 1
+                    "strokeWidth": 0
                 }
             },
             {
-                "value": "Kissé átlag feletti",
-                "legend": "kissé átlag feletti",
+                "value": "jó",
+                "legend": "jó",
                 "style": {
-                    "fill": "#7dde0d",
+                    "fill": "#d95f0e",
                     "stroke": "#000000",
-                    "strokeWidth": 1
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "legjobb",
+                "legend": "legjobb",
+                "style": {
+                    "fill": "#993404",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
+    },
+    "555P01_R1": {
+        "type": "categorized",
+        "column": "quality",
+        "categories": [
+            {
+                "value": "igen gyenge",
+                "legend": "igen gyenge",
+                "style": {
+                    "fill": "#673b10",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#dfa214",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "átlagos",
+                "legend": "átlagos",
+                "style": {
+                    "fill": "#e8f22a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#0aeb10",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kiváló",
+                "legend": "kiváló",
+                "style": {
+                    "fill": "#16460f",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
                 }
             }
         ]

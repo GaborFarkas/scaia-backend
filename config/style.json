@@ -100,5 +100,281 @@
                 }
             }
         ]
+    },
+    "129P00_R1": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "jelentősen szárazabb",
+                "legend": "jelentősen szárazabb",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé szárazabb",
+                "legend": "kissé szárazabb",
+                "style": {
+                    "fill": "#f17c4a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "szárazodott",
+                "legend": "szárazodott",
+                "style": {
+                    "fill": "#fec980",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "0",
+                "legend": "0",
+                "style": {
+                    "fill": "#ffffbf",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé nedvesebb",
+                "legend": "kissé nedvesebb",
+                "style": {
+                    "fill": "#c7e9ad",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "nedvesebb",
+                "legend": "nedvesebb",
+                "style": {
+                    "fill": "#80bfac",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentősen nedvesebb",
+                "legend": "jelentősen nedvesebb",
+                "style": {
+                    "fill": "#2b83ba",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
+    },
+    "129P00_R2": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "jelentősen szárazabb",
+                "legend": "jelentősen szárazabb",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé szárazabb",
+                "legend": "kissé szárazabb",
+                "style": {
+                    "fill": "#f17c4a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "szárazodott",
+                "legend": "szárazodott",
+                "style": {
+                    "fill": "#fec980",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "0",
+                "legend": "0",
+                "style": {
+                    "fill": "#ffffbf",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé nedvesebb",
+                "legend": "kissé nedvesebb",
+                "style": {
+                    "fill": "#c7e9ad",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "nedvesebb",
+                "legend": "nedvesebb",
+                "style": {
+                    "fill": "#80bfac",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentősen nedvesebb",
+                "legend": "jelentősen nedvesebb",
+                "style": {
+                    "fill": "#2b83ba",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
+    },
+    "129P00_R3": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "jelentősen szárazabb",
+                "legend": "jelentősen szárazabb",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé szárazabb",
+                "legend": "kissé szárazabb",
+                "style": {
+                    "fill": "#f17c4a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "szárazodott",
+                "legend": "szárazodott",
+                "style": {
+                    "fill": "#fec980",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "0",
+                "legend": "0",
+                "style": {
+                    "fill": "#ffffbf",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé nedvesebb",
+                "legend": "kissé nedvesebb",
+                "style": {
+                    "fill": "#c7e9ad",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "nedvesebb",
+                "legend": "nedvesebb",
+                "style": {
+                    "fill": "#80bfac",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentősen nedvesebb",
+                "legend": "jelentősen nedvesebb",
+                "style": {
+                    "fill": "#2b83ba",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
+    },
+    "129P00_R4": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "jelentősen szárazabb",
+                "legend": "jelentősen szárazabb",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé szárazabb",
+                "legend": "kissé szárazabb",
+                "style": {
+                    "fill": "#f17c4a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "szárazodott",
+                "legend": "szárazodott",
+                "style": {
+                    "fill": "#fec980",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "0",
+                "legend": "0",
+                "style": {
+                    "fill": "#ffffbf",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "kissé nedvesebb",
+                "legend": "kissé nedvesebb",
+                "style": {
+                    "fill": "#c7e9ad",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "nedvesebb",
+                "legend": "nedvesebb",
+                "style": {
+                    "fill": "#80bfac",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentősen nedvesebb",
+                "legend": "jelentősen nedvesebb",
+                "style": {
+                    "fill": "#2b83ba",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
     }
 }

@@ -199,7 +199,7 @@
                     {
                         "id": "129P00",
                         "name": "Soil wetness",
-                        "type": "process",
+                        "type": "map",
                         "icon": "fas fa-tint",
                         "inputs": null
                     },

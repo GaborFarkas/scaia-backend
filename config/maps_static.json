@@ -16,5 +16,32 @@
             "name": "Soil pattern based zones",
             "mapfile": "555P02.map"
         }]
+    },
+    "129P00": {
+        "name": "Soil wetness",
+        "layers": [{
+            "id": "129P00_R1",
+            "type": "raster",
+            "name": "2020. 03. 25.",
+            "mapfile": "129P00.map"
+        },
+        {
+            "id": "129P00_R2",
+            "type": "raster",
+            "name": "2020. 03. 31.",
+            "mapfile": "129P00.map"
+        },
+        {
+            "id": "129P00_R3",
+            "type": "raster",
+            "name": "2020. 04. 06.",
+            "mapfile": "129P00.map"
+        },
+        {
+            "id": "129P00_R4",
+            "type": "raster",
+            "name": "2020. 04. 12.",
+            "mapfile": "129P00.map"
+        }]
     }
 }

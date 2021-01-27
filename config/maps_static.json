@@ -43,5 +43,82 @@
             "name": "2020. 04. 12.",
             "mapfile": "129P00.map"
         }]
+    },
+    "129P01": {
+        "name": "Germination",
+        "layers": [{
+            "id": "129P01_R1",
+            "type": "raster",
+            "name": "Raster view",
+            "mapfile": "129P01.map"
+        },
+        {
+            "id": "129P01_V1",
+            "type": "vector",
+            "name": "Vector view"
+        }]
+    },
+    "129P02": {
+        "name": "Plant development",
+        "layers": [{
+            "id": "129P02_R1",
+            "type": "raster",
+            "name": "NDVIs",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_R2",
+            "type": "raster",
+            "name": "NDVIm",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_R3",
+            "type": "raster",
+            "name": "NDVIa",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_V1",
+            "type": "vector",
+            "name": "NDVI (vector)"
+        },
+        {
+            "id": "129P02_R4",
+            "type": "raster",
+            "name": "DPSVs",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_R5",
+            "type": "raster",
+            "name": "DPSVm",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_R6",
+            "type": "raster",
+            "name": "DPSVa",
+            "mapfile": "129P02.map"
+        },
+        {
+            "id": "129P02_V2",
+            "type": "vector",
+            "name": "DPSV (vector)"
+        }]
+    },
+    "129P05": {
+        "name": "Weed detection",
+        "layers": [{
+            "id": "129P05_R1",
+            "type": "raster",
+            "name": "Raster view",
+            "mapfile": "129P05.map"
+        },
+        {
+            "id": "129P05_V1",
+            "type": "vector",
+            "name": "Vector view"
+        }]
     }
 }

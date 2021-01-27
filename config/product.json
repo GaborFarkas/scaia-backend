@@ -206,7 +206,7 @@
                     {
                         "id": "129P01",
                         "name": "Germination",
-                        "type": "process",
+                        "type": "map",
                         "icon": "fas fa-seedling",
                         "inputs": [
                             {
@@ -218,7 +218,7 @@
                     {
                         "id": "129P02",
                         "name": "Plant development",
-                        "type": "process",
+                        "type": "map",
                         "icon": "fab fa-pagelines",
                         "inputs": [
                             {
@@ -230,7 +230,7 @@
                     {
                         "id": "129P05",
                         "name": "Weed detection",
-                        "type": "process",
+                        "type": "map",
                         "icon": "fas fa-spray-can",
                         "inputs": [
                             {

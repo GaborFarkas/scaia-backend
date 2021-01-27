@@ -376,5 +376,551 @@
                 }
             }
         ]
+    },
+    "129P01_R1": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "változatlan",
+                "legend": "változatlan",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentéktelen fejlődés",
+                "legend": "jelentéktelen fejlődés",
+                "style": {
+                    "fill": "#d9d487",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "fejlődés",
+                "legend": "fejlődés",
+                "style": {
+                    "fill": "#5eef83",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            },
+            {
+                "value": "jelentős fejlődés",
+                "legend": "jelentős fejlődés",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+            }
+        ]
+    },
+    "129P01_V1": {
+        "type": "binned",
+        "column": "fej0524",
+        "categories": [
+            {
+                "values": [-0.1, 0.695],
+                "legend": "gyenge fejlődés",
+                "style": {
+                    "fill": "#f3eb18",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [0.695, 1.445],
+                "legend": "mérsékelt fejlődő",
+                "style": {
+                    "fill": "#87df24",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [1.445, 2.0875],
+                "legend": "fejlődés",
+                "style": {
+                    "fill": "#53a231",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [2.0875, 4.76],
+                "legend": "jelentősebb fejlődés",
+                "style": {
+                    "fill": "#4b6152",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            }
+        ]
+    },
+    "129P02_R1": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "gyengébb fejlődés",
+                "legend": "gyengébb fejlődés",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#fec981",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "fejlődő",
+                "legend": "fejlődő",
+                "style": {
+                    "fill": "#c4e687",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "erős fejlődés",
+                "legend": "erős fejlődés",
+                "style": {
+                    "fill": "#1a9641",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_R2": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "közepes",
+                "legend": "közepes",
+                "style": {
+                    "fill": "#fec981",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#c4e687",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "kiváló",
+                "legend": "kiváló",
+                "style": {
+                    "fill": "#1a9641",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_R3": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "közepes",
+                "legend": "közepes",
+                "style": {
+                    "fill": "#fec981",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#c4e687",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "kiváló",
+                "legend": "kiváló",
+                "style": {
+                    "fill": "#1a9641",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_V1": {
+        "type": "binned",
+        "column": "M_20200802mean",
+        "categories": [
+            {
+                "values": [5599, 6770],
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [6770, 6998],
+                "legend": "közepes",
+                "style": {
+                    "fill": "#fec981",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [6998, 7310],
+                "legend": "jó",
+                "style": {
+                    "fill": "#c4e687",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [7310, 7606],
+                "legend": "kiváló",
+                "style": {
+                    "fill": "#1a9641",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            }
+        ]
+    },
+    "129P02_R4": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "igen gyenge",
+                "legend": "igen gyenge",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#dfc27d",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "közepes",
+                "legend": "közepes",
+                "style": {
+                    "fill": "#cbf79c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#28eb76",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jelentős",
+                "legend": "jelentős",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_R5": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "igen gyenge",
+                "legend": "igen gyenge",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "gyengébb",
+                "legend": "gyengébb",
+                "style": {
+                    "fill": "#dfc27d",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "közepes",
+                "legend": "közepes",
+                "style": {
+                    "fill": "#cbf79c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#28eb76",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "igen fejlett",
+                "legend": "igen fejlett",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_R6": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "igen gyenge",
+                "legend": "igen gyenge",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "gyenge",
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#dfc27d",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "közepes",
+                "legend": "közepes",
+                "style": {
+                    "fill": "#cbf79c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jó",
+                "legend": "jó",
+                "style": {
+                    "fill": "#28eb76",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "jelentős",
+                "legend": "jelentős",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P02_V2": {
+        "type": "binned",
+        "column": "s_20200629mean",
+        "categories": [
+            {
+                "values": [35.5, 46.7],
+                "legend": "leggyengébb",
+                "style": {
+                    "fill": "#d7191c",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [46.7, 53.2],
+                "legend": "gyenge",
+                "style": {
+                    "fill": "#fec981",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [53.2, 59.2],
+                "legend": "közepes",
+                "style": {
+                    "fill": "#c4e687",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            },
+            {
+                "values": [59.2, 86.9],
+                "legend": "jó",
+                "style": {
+                    "fill": "#1a9641",
+                    "stroke": "#000000",
+                    "strokeWidth": 1
+                }
+            }
+        ]
+    },
+    "129P05_R1": {
+        "type": "categorized",
+        "column": "",
+        "categories": [
+            {
+                "value": "talajfelszín",
+                "legend": "talajfelszín",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "gyér növényzet",
+                "legend": "gyér növényzet",
+                "style": {
+                    "fill": "#cbf79c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "value": "növényzet",
+                "legend": "növényzet",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
+    },
+    "129P05_V1": {
+        "type": "binned",
+        "column": "1118mean",
+        "categories": [
+            {
+                "values": [687, 1713],
+                "legend": "talajfelszín",
+                "style": {
+                    "fill": "#a6611a",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "values": [1713, 2740],
+                "legend": "gyér növényzet",
+                "style": {
+                    "fill": "#cbf79c",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            },
+            {
+                "values": [2740, 3766],
+                "legend": "növényzet",
+                "style": {
+                    "fill": "#40ce2e",
+                    "stroke": "#000000",
+                    "strokeWidth": 0
+                }
+
+            }
+        ]
     }
 }

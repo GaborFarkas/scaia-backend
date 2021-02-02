@@ -331,6 +331,19 @@ includeHook($hooks, 'pre');
                 </div>
               </div>
 
+              <div class="card no-padding">
+                <div class="card-header">
+                  <h3>MapServer</h3>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+
+                    <label>Path <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Set the absolute path to your MapServer cgi (with the starting slash, e.g. /cgi-bin/mapserv)"><i class="fa fa-question-circle"></i></a></label>
+                    <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="MapServer Path" name="mapserv_path" id="mapserv_path" value="<?=$settings->mapserv_path; ?>">
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
           <input type="hidden" name="csrf" value="<?=Token::generate(); ?>" />

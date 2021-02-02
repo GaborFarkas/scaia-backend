@@ -19,6 +19,9 @@ if (!$user->isEligible()) {
     die();
 }
 
+$db = DB::getInstance();
+$settings = $db->query("SELECT * FROM settings")->first();
+
 $request_headers = array( );
 
 foreach ( $_SERVER as $key => $value ) {
@@ -38,7 +41,7 @@ foreach ( $_SERVER as $key => $value ) {
 
 $request_params = $_GET;
 
-$request_url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/cgi-bin/mapserv';
+$request_url = $_SERVER['REQUEST_SCHEME'].'://localhost'.$settings->mapserv_path;
 
 if (Input::get('map')) {
     $request_url .= '?map='.$mapFilePrefix.'/'.Input::get('map');

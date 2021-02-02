@@ -2,12 +2,6 @@
 
 // https://github.com/mcnemesis/proxy.php/blob/master/proxy.php
 
-// Set relative URL to mapfiles.
-//$mapFilePrefix = '../maps/raster';
-
-// Dev prefix
-$mapFilePrefix = '../dalmand_backend/maps/raster';
-
 require_once '../admin/users/init.php';
 
 if (!$user->canServed()) {
@@ -44,7 +38,7 @@ $request_params = $_GET;
 $request_url = $_SERVER['REQUEST_SCHEME'].'://localhost'.$settings->mapserv_path;
 
 if (Input::get('map')) {
-    $request_url .= '?map='.$mapFilePrefix.'/'.Input::get('map');
+    $request_url .= '?map='.$settings->mapfile_prefix.'/'.Input::get('map');
     foreach ($_GET as $key => $value) {
         if ($key !== 'map') {
             $request_url .= '&'.$key.'='.$value;
@@ -59,6 +53,10 @@ $ch = curl_init( $request_url );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, $request_headers );   // (re-)send headers
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );	 // return response
 curl_setopt( $ch, CURLOPT_HEADER, true );	   // enabled response headers
+
+//NOTE: Do not use these options for anything else but fixed endpoints on localhost!!!!!!
+curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, false); // enable HTTPS without SSL verification
+curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false); // enable HTTPS without SSL verification
 
 // retrieve response (headers and content)
 $response = curl_exec( $ch );

@@ -341,6 +341,12 @@ includeHook($hooks, 'pre');
                     <label>Path <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Set the absolute path to your MapServer cgi (with the starting slash, e.g. /cgi-bin/mapserv)"><i class="fa fa-question-circle"></i></a></label>
                     <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="MapServer Path" name="mapserv_path" id="mapserv_path" value="<?=$settings->mapserv_path; ?>">
                   </div>
+
+                  <div class="form-group">
+
+                    <label>Mapfile prefix <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Set the relative path to your map files from the backend's api folder (e.g. ../maps/raster)"><i class="fa fa-question-circle"></i></a></label>
+                    <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Map File Prefix" name="mapfile_prefix" id="mapfile_prefix" value="<?=$settings->mapfile_prefix; ?>">
+                  </div>
                 </div>
               </div>
 

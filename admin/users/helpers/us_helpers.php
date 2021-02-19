@@ -1434,3 +1434,33 @@ if (!function_exists('deleteHelpCards')) {
         }
     }
 }
+
+if (!function_exists('fetchPublicJobs')) {
+    function fetchPublicJobs() {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM jobs WHERE public = 1 AND archived = 0');
+      $results = $query->results();
+
+      return $results;
+    }
+}
+
+if (!function_exists('fetchUserJobs')) {
+    function fetchUserJobs($userId) {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM jobs WHERE public = 0 AND archived = 0 AND user_id = ?', [$userId]);
+      $results = $query->results();
+
+      return $results;
+    }
+}
+
+if (!function_exists('fetchAllJobs')) {
+    function fetchAllJobs() {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM jobs');
+      $results = $query->results();
+
+      return $results;
+    }
+}

@@ -4,8 +4,8 @@
       <ol class="breadcrumb text-right">
         <li><a href="<?=$us_url_root; ?>users/admin.php">Dashboard</a></li>
         <li>Manage</li>
-        <li><a href="<?=$us_url_root; ?>users/admin.php?view=helps">Help cards</a></li>
-        <li class="active">Help card</li>
+        <li><a href="<?=$us_url_root; ?>users/admin.php?view=helps">Help Cards</a></li>
+        <li class="active">Help Card</li>
       </ol>
     </div>
   </div>

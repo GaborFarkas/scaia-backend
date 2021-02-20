@@ -187,7 +187,8 @@ function activeDropdown($View, $dropId, $Area = false){
             <?php if(checkAccess('view','permissions')){?> <li <?=($view == 'permissions') ? 'class="active"' : '' ;?>><a href="admin.php?view=permissions"><i class="menu-icon fa fa-lock"></i>Permission Levels</a></li><?php } ?>
             <?php if(in_array($user->data()->id,$master_account)){?> <li <?=($view == 'spice') ? 'class="active"' : '' ;?>><a href="admin.php?view=spice"><i class="menu-icon fa fa-user-secret"></i>Spice Shaker</a></li><?php } ?>
             <?php if(checkAccess('view','users')){?> <li <?=($view == 'users') ? 'class="active"' : '' ;?>><a href="admin.php?view=users"><i class="menu-icon fa fa-user"></i>Users</a></li><?php } ?>
-            <?php if(checkAccess('view','helps')){?> <li <?=($view == 'helps') ? 'class="active"' : '' ;?>><a href="admin.php?view=helps"><i class="menu-icon fa fa-question-circle"></i>Help cards</a></li><?php } ?>
+            <?php if(checkAccess('view','jobs')){?> <li <?=($view == 'jobs') ? 'class="active"' : '' ;?>><a href="admin.php?view=jobs"><i class="menu-icon fa fa-globe"></i>Sentinel Processes</a></li><?php } ?>
+            <?php if(checkAccess('view','helps')){?> <li <?=($view == 'helps') ? 'class="active"' : '' ;?>><a href="admin.php?view=helps"><i class="menu-icon fa fa-question-circle"></i>Help Cards</a></li><?php } ?>
           <h3 class="menu-title">Misc</h3><!-- /.menu-title -->
           <li class="menu-item">
             <?php if(file_exists($abs_us_root.$us_url_root.'usersc/includes/admin_menu.php')){

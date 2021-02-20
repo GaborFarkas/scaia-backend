@@ -1466,11 +1466,46 @@ if (!function_exists('fetchAllJobs')) {
 }
 
 if (!function_exists('fetchJob')) {
-    function fetchJob($jobId) {
+    function fetchJob($jobId, $archived = false) {
       $db = DB::getInstance();
-      $query = $db->query('SELECT * FROM jobs WHERE archived = 0 AND id = ?', [$jobId]);
+
+      if ($archived) {
+        $query = $db->query('SELECT * FROM jobs WHERE id = ?', [$jobId]);
+      } else {
+        $query = $db->query('SELECT * FROM jobs WHERE archived = 0 AND id = ?', [$jobId]);
+      }
+
       $result = $query->first();
 
       return $result;
+    }
+}
+
+if (!function_exists('jobExists')) {
+    //Check if a job exists in the DB
+    function jobExists($id)
+    {
+        $db = DB::getInstance();
+        $query = $db->query('SELECT * FROM jobs WHERE id = ?', [$id]);
+        $num_returns = $query->count();
+        if ($num_returns > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+if (!function_exists('deleteJobs')) {
+    function deleteJobs($cards)
+    {
+        $db = DB::getInstance();
+        $i = 0;
+        foreach ($cards as $id) {
+            $query = $db->query('DELETE FROM jobs WHERE id = ?', [$id]);
+            ++$i;
+        }
+
+        return $i;
     }
 }

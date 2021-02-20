@@ -235,6 +235,14 @@ if ($view == '' || $view == 'dashboard') {
     $path = usView('_admin_users.php');
     include $path;
     break;
+    case 'job':
+      $path = usView('_admin_job.php');
+      include $path;
+    break;
+    case 'jobs':
+      $path = usView('_admin_jobs.php');
+      include $path;
+    break;
     case 'help':
       $path = usView('_admin_help.php');
       include $path;

@@ -4,7 +4,7 @@
         "layers": [{
             "id": "555P01_R1",
             "type": "raster",
-            "name": "Crop pattern based zones",
+            "name": "Növényzet-alapú művelési zónák",
             "mapfile": "555P01.map"
         }]
     },
@@ -13,53 +13,53 @@
         "layers": [{
             "id": "555P02_R1",
             "type": "raster",
-            "name": "Soil pattern based zones",
+            "name": "Talaj-alapú művelési zónák",
             "mapfile": "555P02.map"
         }]
     },
     "129P00": {
-        "name": "Soil wetness",
+        "name": "Talajnedvesség",
         "layers": [{
             "id": "129P00_R1",
             "type": "raster",
-            "name": "2020. 03. 25.",
+            "name": "Talajnedvesség 2020. 03. 25.",
             "mapfile": "129P00.map"
         },
         {
             "id": "129P00_R2",
             "type": "raster",
-            "name": "2020. 03. 31.",
+            "name": "Talajnedvesség 2020. 03. 31.",
             "mapfile": "129P00.map"
         },
         {
             "id": "129P00_R3",
             "type": "raster",
-            "name": "2020. 04. 06.",
+            "name": "Talajnedvesség 2020. 04. 06.",
             "mapfile": "129P00.map"
         },
         {
             "id": "129P00_R4",
             "type": "raster",
-            "name": "2020. 04. 12.",
+            "name": "Talajnedvesség 2020. 04. 12.",
             "mapfile": "129P00.map"
         }]
     },
     "129P01": {
-        "name": "Germination",
+        "name": "Kelés",
         "layers": [{
             "id": "129P01_R1",
             "type": "raster",
-            "name": "Raster view",
+            "name": "Kelés állapot (S2)",
             "mapfile": "129P01.map"
         },
         {
             "id": "129P01_V1",
             "type": "vector",
-            "name": "Vector view"
+            "name": "Táblák kelés állapota (S2)"
         }]
     },
     "129P02": {
-        "name": "Plant development",
+        "name": "Növényállomány fejlődés",
         "layers": [{
             "id": "129P02_R1",
             "type": "raster",

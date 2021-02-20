@@ -15,10 +15,45 @@ if (!$user->isEligible()) {
 
 if (Input::get('id')) {
     $id = Input::get('id');
+    $job = fetchJob($id);
 
-    //TODO: Query the DB for a product matching the ID.
-    http_response_code(404);
-    die();
+    // Only handle finished processes with at least partial result.
+    if ($job && ($job->status == 'success' || $job->status == 'partial')) {
+        $maps = json_decode(file_get_contents('../config/maps_dynamic.json'));
+        $prodId = $job->product_id;
+
+        // If we have a template in the config JSON
+        if ($maps->$prodId) {
+            // Convert timestamp to filename and display formats.
+            $displayTs = tsToDisplay($job->timestamp);
+            $fileTs = tsToFile($job->timestamp);
+
+            $map = $maps->$prodId;
+            foreach ($map->layers as $layer) {
+                if ($layer->type == 'raster') {
+                    // Replace placeholders in mapfile filenames
+                    $layer->mapfile = str_replace('{timestamp}', $fileTs, $layer->mapfile);
+                }
+            }
+
+            // Add timestamps to display names.
+            // If we have only a single layer, add it to the layer name, as in this case, the group name won't be processed.
+            if (count($map->layers) == 1) {
+                $map->layers[0]->name .= ' ('.$displayTs.')';
+            } else {
+                $map->name .= ' ('.$displayTs.')';
+            }
+
+            echo json($map);
+            exit();
+        } else {
+            http_response_code(404);
+            die();
+        }
+    } else {
+        http_response_code(404);
+        die();
+    }
 } else {
     http_response_code(404);
     die();

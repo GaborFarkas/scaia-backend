@@ -1,5 +1,5 @@
 {
-    "129P01_V1": "129P01VS1dpsvis_20200524.geojson",
+    "129P01_V1": "129P01VS1dpsvis_{timestamp}.geojson",
     "129P02_V1": "129P02RS2_ndvi_20200803.geojson",
     "129P02_V2": "129P02VS1dpsvi_20200629.geojson",
     "129P05_V1": "129P05VS2_ndvi_20201118.geojson"

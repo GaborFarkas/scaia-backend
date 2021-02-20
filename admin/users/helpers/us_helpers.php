@@ -1509,3 +1509,17 @@ if (!function_exists('deleteJobs')) {
         return $i;
     }
 }
+
+if (!function_exists('tsToFile')) {
+    function tsToFile($ts)
+    {
+        return str_replace('-', '', str_replace(':', '', str_replace(' ', 'T', $ts)));
+    }
+}
+
+if (!function_exists('tsToDisplay')) {
+    function tsToDisplay($ts)
+    {
+        return trim(str_replace('-', '. ', explode(' ', $ts)[0])).'.';
+    }
+}

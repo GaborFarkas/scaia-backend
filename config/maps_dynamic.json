@@ -1,0 +1,43 @@
+{
+    "555P01": {
+        "name": "Crop pattern based zones",
+        "layers": [{
+            "id": "555P01_R1",
+            "type": "raster",
+            "name": "Növényzet-alapú művelési zónák",
+            "mapfile": "555P01.map"
+        }]
+    },
+    "555P02": {
+        "name": "Soil pattern based zones",
+        "layers": [{
+            "id": "555P02_R1",
+            "type": "raster",
+            "name": "Talaj-alapú művelési zónák",
+            "mapfile": "555P02.map"
+        }]
+    },
+    "129P00": {
+        "name": "Talajnedvesség",
+        "layers": [{
+            "id": "129P00_R1",
+            "type": "raster",
+            "name": "Talajnedvesség",
+            "mapfile": "129P00_{timestamp}.map"
+        }]
+    },
+    "129P01": {
+        "name": "Kelés",
+        "layers": [{
+            "id": "129P01_R1",
+            "type": "raster",
+            "name": "Kelés állapot (S2)",
+            "mapfile": "129P01_{timestamp}.map"
+        },
+        {
+            "id": "129P01_V1",
+            "type": "vector",
+            "name": "Táblák kelés állapota (S2)"
+        }]
+    }
+}

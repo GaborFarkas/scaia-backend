@@ -1464,3 +1464,13 @@ if (!function_exists('fetchAllJobs')) {
       return $results;
     }
 }
+
+if (!function_exists('fetchJob')) {
+    function fetchJob($jobId) {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM jobs WHERE archived = 0 AND id = ?', [$jobId]);
+      $result = $query->first();
+
+      return $result;
+    }
+}

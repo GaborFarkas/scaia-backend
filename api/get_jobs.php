@@ -15,7 +15,7 @@ if (!$user->isEligible()) {
 
 $response = [];
 
-if (Input::get('user')) {
+if (isset($_GET['user'])) {
     // Return list of user jobs
     $jobs = fetchUserJobs($user->data()->id);
 } else {

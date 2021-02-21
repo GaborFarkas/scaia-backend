@@ -14,11 +14,13 @@ if (!$user->isEligible()) {
 }
 
 if (Input::get('id')) {
+    $db = DB::getInstance();
+    $settings = $db->query("SELECT * FROM settings")->first();
     $id = Input::get('id');
     $paths = json_decode(file_get_contents('../config/vector_paths.json'));
 
-    if (file_exists('../maps/vector/'.$paths->$id)) {
-        echo file_get_contents('../maps/vector/'.$paths->$id);
+    if (file_exists($settings->vector_output.'/'.$paths->$id)) {
+        echo file_get_contents($settings->vector_output.'/'.$paths->$id);
     } else {
         http_response_code(404);
         die();

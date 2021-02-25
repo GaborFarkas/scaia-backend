@@ -1432,7 +1432,7 @@ if (!function_exists('deleteHelpCards')) {
                 }
             }
         }
-        
+
         return null;
     }
 }
@@ -1552,5 +1552,18 @@ if (!function_exists('tsToDisplay')) {
     function tsToDisplay($ts)
     {
         return trim(str_replace('-', '. ', explode(' ', $ts)[0])).'.';
+    }
+}
+
+if (!function_exists('getConfigPath')) {
+    function getConfigPath($path, $root) {
+        if (file_exists($path) && $path == realpath($path)) {
+            return $path;
+        } else {
+            // Try as a relative path from the server root.
+            if (file_exists($root.'/'.$path)) {
+                return $root.'/'.$path;
+            }
+        }
     }
 }

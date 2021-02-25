@@ -38,7 +38,7 @@ $request_params = $_GET;
 $request_url = $_SERVER['REQUEST_SCHEME'].'://localhost'.$settings->mapserv_path;
 
 if (Input::get('map')) {
-    $request_url .= '?map='.$settings->mapfile_prefix.'/'.Input::get('map');
+    $request_url .= '?map='.getConfigPath($settings->mapfile_prefix, $abs_us_root).'/'.Input::get('map');
     foreach ($_GET as $key => $value) {
         if ($key !== 'map') {
             $request_url .= '&'.$key.'='.$value;

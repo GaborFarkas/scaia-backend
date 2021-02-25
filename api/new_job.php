@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $settings = $db->query("SELECT * FROM settings")->first();
                 $job = fetchJob($job_id);
                 $fileTs = tsToFile($job->timestamp);
-                $mapfile = $map->mapfile ? '../'.$settings->mapserv_path.'/'.$settings->mapfile_prefix.'/'.str_replace('{timestamp}', $fileTs, $map->mapfile) : null;
+                $mapfile = $map->mapfile ? getConfigPath($settings->mapfile_prefix, $abs_us_root).'/'.str_replace('{timestamp}', $fileTs, $map->mapfile) : null;
                 $paths = json_decode(file_get_contents('../config/map_paths.json'));
                 $mapfile_layers_content = '';
 
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $layer_id = $layer->id;
                         if ($paths->$layer_id && file_exists('../map_templates/'.$layer_id)) {
                             // Replace {layername} placeholder to the template file name.
-                            $raster_path = $settings->raster_output.'/'.str_replace('{timestamp}', $fileTs, $paths->$layer_id);
+                            $raster_path = getConfigPath($settings->raster_output, $abs_us_root).'/'.str_replace('{timestamp}', $fileTs, $paths->$layer_id);
                             $mapfile_layers_content .= str_replace('{layername}', $raster_path, file_get_contents('../map_templates/'.$layer_id));
                         } else {
                             $template_err = true;
@@ -104,8 +104,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Try to create a new mapfile. If we have an exception due to lack of permissions, fail the process.
                     try {
                         $file = fopen($mapfile, 'w');
-                        fwrite($file, $mapfile_content);
-                        fclose();
+
+                        if ($file) {
+                            fwrite($file, $mapfile_content);
+                            fclose($file);
+                        } else {
+                            $template_err = true;
+                        }
                     } catch (Exception $e) {
                         $template_err = true;
                     }

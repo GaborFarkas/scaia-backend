@@ -19,8 +19,8 @@ if (Input::get('id')) {
     $id = Input::get('id');
     $paths = json_decode(file_get_contents('../config/map_paths.json'));
 
-    if (file_exists($settings->vector_output.'/'.$paths->$id)) {
-        echo file_get_contents($settings->vector_output.'/'.$paths->$id);
+    if (file_exists(getConfigPath($settings->vector_output, $abs_us_root).'/'.$paths->$id)) {
+        echo file_get_contents(getConfigPath($settings->vector_output, $abs_us_root).'/'.$paths->$id);
     } else {
         http_response_code(404);
         die();

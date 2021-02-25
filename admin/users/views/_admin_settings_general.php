@@ -344,19 +344,19 @@ includeHook($hooks, 'pre');
 
                   <div class="form-group">
 
-                    <label>Mapfile prefix <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your map files from the backend's api folder (e.g. ../maps/raster) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
+                    <label>Mapfile prefix <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your map files from the backend's root folder (e.g. maps/raster) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
                     <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Map File Prefix" name="mapfile_prefix" id="mapfile_prefix" value="<?=$settings->mapfile_prefix; ?>">
                   </div>
 
                   <div class="form-group">
 
-                    <label>Raster output folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your raw raster outputs from the mapfiles' folder (e.g. ./) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
+                    <label>Raster output folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your raw raster outputs from the backend's root folder (e.g. maps/raster) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
                     <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Raster Output Folder" name="raster_output" id="raster_output" value="<?=$settings->raster_output; ?>">
                   </div>
 
                   <div class="form-group">
 
-                    <label>Vector output folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your raw vector outputs from the backend's api folder (e.g. ../maps/vector) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
+                    <label>Vector output folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your raw vector outputs from the backend's root folder (e.g. maps/vector) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
                     <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Vector Output Folder" name="vector_output" id="vector_output" value="<?=$settings->vector_output; ?>">
                   </div>
                 </div>

@@ -29,11 +29,9 @@ if (Input::get('id')) {
             $fileTs = tsToFile($job->timestamp);
 
             $map = $maps->$prodId;
+            $map->mapfile = str_replace('{timestamp}', $fileTs, $map->mapfile);
             foreach ($map->layers as $layer) {
-                if ($layer->type == 'raster') {
-                    // Replace placeholders in mapfile filenames
-                    $layer->mapfile = str_replace('{timestamp}', $fileTs, $layer->mapfile);
-                }
+                //TODO: Add partial map support
             }
 
             // Add timestamps to display names.

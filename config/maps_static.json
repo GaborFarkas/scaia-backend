@@ -1,20 +1,20 @@
 {
     "555P01": {
         "name": "Crop pattern based zones",
+        "mapfile": "555P01.map",
         "layers": [{
             "id": "555P01_R1",
             "type": "raster",
-            "name": "Növényzet-alapú művelési zónák",
-            "mapfile": "555P01.map"
+            "name": "Növényzet-alapú művelési zónák"
         }]
     },
     "555P02": {
         "name": "Soil pattern based zones",
+        "mapfile": "555P02.map",
         "layers": [{
             "id": "555P02_R1",
             "type": "raster",
-            "name": "Talaj-alapú művelési zónák",
-            "mapfile": "555P02.map"
+            "name": "Talaj-alapú művelési zónák"
         }]
     },
     "129P00": {

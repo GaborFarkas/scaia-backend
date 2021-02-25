@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Generate mapfile, if there are raster layers in this product.
             $maps = json_decode(file_get_contents('../config/maps_dynamic.json'));
-            $map = $maps->$prodid;
             $template_err = false;
+            $db = DB::getInstance();
 
-            if ($map) {
-                $db = DB::getInstance();
+            if (isset($maps->$prodid)) {
+                $map = $maps->$prodid;
                 $settings = $db->query("SELECT * FROM settings")->first();
                 $job = fetchJob($job_id);
                 $fileTs = tsToFile($job->timestamp);
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Only generate template for raster layers.
                     if ($layer->type === 'raster') {
                         $layer_id = $layer->id;
-                        if ($paths->$layer_id && file_exists('../map_templates/'.$layer_id)) {
+                        if (isset($paths->$layer_id) && file_exists('../map_templates/'.$layer_id)) {
                             // Replace {layername} placeholder to the template file name.
                             $raster_path = getConfigPath($settings->raster_output, $abs_us_root).'/'.str_replace('{timestamp}', $fileTs, $paths->$layer_id);
                             $mapfile_layers_content .= str_replace('{layername}', $raster_path, file_get_contents('../map_templates/'.$layer_id));

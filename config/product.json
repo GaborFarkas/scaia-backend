@@ -199,14 +199,14 @@
                     {
                         "id": "129P00",
                         "name": "Soil wetness",
-                        "type": "map",
+                        "type": "process",
                         "icon": "fas fa-tint",
                         "inputs": null
                     },
                     {
                         "id": "129P01",
                         "name": "Germination",
-                        "type": "map",
+                        "type": "process",
                         "icon": "fas fa-seedling",
                         "inputs": [
                             {
@@ -218,7 +218,7 @@
                     {
                         "id": "129P02",
                         "name": "Plant development",
-                        "type": "map",
+                        "type": "process",
                         "icon": "fab fa-pagelines",
                         "inputs": [
                             {
@@ -230,7 +230,7 @@
                     {
                         "id": "129P05",
                         "name": "Weed detection",
-                        "type": "map",
+                        "type": "process",
                         "icon": "fas fa-spray-can",
                         "inputs": [
                             {
@@ -253,48 +253,28 @@
                 "name": "Drought detection",
                 "type": "process",
                 "icon": "fas fa-sun",
-                "inputs": [
-                    {
-                        "name": "drought period",
-                        "type": "interval"
-                    }
-                ]
+                "inputs": null
             },
             {
                 "id": "222P22",
                 "name": "Inland Excess Water",
                 "type": "process",
                 "icon": "fas fa-water",
-                "inputs": [
-                    {
-                        "name": "flooding period",
-                        "type": "interval"
-                    }
-                ]
+                "inputs": null
             },
             {
                 "id": "222P23",
                 "name": "Snow detection",
                 "type": "process",
                 "icon": "fas fa-snowflake",
-                "inputs": [
-                    {
-                        "name": "snowing date",
-                        "type": "date"
-                    }
-                ]
+                "inputs": null
             },
             {
                 "id": "222P21",
                 "name": "Frost detection",
                 "type": "process",
                 "icon": "fas fa-snowflake",
-                "inputs": [
-                    {
-                        "name": "frost date",
-                        "type": "date"
-                    }
-                ]
+                "inputs": null
             }
         ]
     },

@@ -1420,6 +1420,23 @@ if (!function_exists('deleteHelpCards')) {
       }
   }
 
+  if (!function_exists('getProductFromGraph')) {
+    function getProductFromGraph($node, $id) {
+        if (isset($node->id) && $node->id === $id) {
+            return $node;
+        } else if (isset($node->items) && is_array($node->items)) {
+            foreach ($node->items as $item) {
+                $match = getProductFromGraph($item, $id);
+                if ($match) {
+                    return $match;
+                }
+            }
+        }
+        
+        return null;
+    }
+}
+
   if (!function_exists('helpCardExists')) {
     //Check if a help card exists in the DB
     function helpCardExists($id)
@@ -1507,6 +1524,20 @@ if (!function_exists('deleteJobs')) {
         }
 
         return $i;
+    }
+}
+
+if (!function_exists('insertJob')) {
+    function insertJob($fields)
+    {
+        $db = DB::getInstance();
+        if (!$db->insert('jobs', $fields)) {
+            throw new Exception($db->errorString());
+        } else {
+            $job_id = $db->lastId();
+        }
+
+        return $job_id;
     }
 }
 

@@ -23,15 +23,21 @@ if (Input::get('id')) {
         $prodId = $job->product_id;
 
         // If we have a template in the config JSON
-        if ($maps->$prodId) {
+        if (isset($maps->$prodId)) {
             // Convert timestamp to filename and display formats.
             $displayTs = tsToDisplay($job->timestamp);
             $fileTs = tsToFile($job->timestamp);
 
             $map = $maps->$prodId;
-            $map->mapfile = str_replace('{timestamp}', $fileTs, $map->mapfile);
-            foreach ($map->layers as $layer) {
-                //TODO: Add partial map support
+            if (isset($map->mapfile)) {
+                $map->mapfile = str_replace('{timestamp}', $fileTs, $map->mapfile);
+            }
+            
+            $availability = str_split($job->avail_mask);
+            foreach ($map->layers as $key => $layer) {
+                if ($availability[$key] == '0') {
+                    unset($map->layers[$key]);
+                }
             }
 
             // Add timestamps to display names.

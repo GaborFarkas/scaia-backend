@@ -130,6 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // TODO: Generate request to the processing unit.
             }
 
+            logger($user->data()->id, 'Jobs', "Started job $job->id.");
             exit();
         } else {
             http_response_code(404);

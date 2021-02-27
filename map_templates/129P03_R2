@@ -1,0 +1,45 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "129P03_R2"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "class1"
+        EXPRESSION ([pixel] >= -100 AND [pixel] < 0)
+        STYLE
+            COLORRANGE 199 243 23 253 239 60
+            DATARANGE -100 0
+        END
+    END
+    CLASS
+        NAME "class2"
+        EXPRESSION ([pixel] >= 0 AND [pixel] < 20)
+        STYLE
+            COLORRANGE 253 239 60 248 182 48
+            DATARANGE 0 20
+        END
+    END
+    CLASS
+        NAME "class3"
+        EXPRESSION ([pixel] >= 20 AND [pixel] < 40)
+        STYLE
+            COLORRANGE 248 182 48 243 151 37
+            DATARANGE 20 40
+        END
+    END
+    CLASS
+        NAME "class4"
+        EXPRESSION ([pixel] >= 40 AND [pixel] <= 100)
+        STYLE
+            COLORRANGE 243 151 37 118 65 45
+            DATARANGE 40 100
+        END
+    END
+    METADATA
+        "wms_title" "129P03_R2"
+    END
+END

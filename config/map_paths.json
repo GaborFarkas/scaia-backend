@@ -1,7 +1,21 @@
 {
     "129P00_R1": "129P00RS1ccdVV_{timestamp}.tif",
+    "129P01_R1": "129P01RS1DPSVI_{timestamp}.tiff",
     "129P01_V1": "129P01VS1dpsvis_{timestamp}.geojson",
-    "129P02_V1": "129P02RS2_ndvi_20200803.geojson",
-    "129P02_V2": "129P02VS1dpsvi_20200629.geojson",
-    "129P05_V1": "129P05VS2_ndvi_20201118.geojson"
+    "129P01_R2": "129P01RS2_ndvi_{timestamp}.tiff",
+    "129P01_V2": "129P01VS2_ndvi_{timestamp}.geojson",
+    "129P02_R1": "129P02RS1dpsvs_{timestamp}.tiff",
+    "129P02_V1": "129P02VS1dpsvs_{timestamp}.geojson",
+    "129P02_V2": "129P02VS1dpsvA_{timestamp}.geojson",
+    "129P02_R2": "129P02RS1dpsvA_{timestamp}.tiff",
+    "129P02_V3": "129P02VS1dpsvM_{timestamp}.geojson",
+    "129P02_R3": "129P02RS1dpsvM_{timestamp}.tiff",
+    "129P02_R4": "129P02RS2ndviM_{timestamp}.tiff",
+    "129P02_V4": "129P02VS2ndviM_{timestamp}.geojson",
+    "129P03_R1": "129P03RS2NDBId_{timestamp}.tif",
+    "129P03_V1": "129P03VS2NDBId_{timestamp}.geojson",
+    "129P03_R2": "129P03RS1dpsvM_{timestamp}.tif",
+    "129P03_V2": "113P03VS1dpsvm_{timestamp}.geojson",
+    "129P05_R1": "129P05RS2_ndvi_{timestamp}.tif",
+    "129P05_V1": "129P05VS2_ndvi_{timestamp}.geojson"
 }

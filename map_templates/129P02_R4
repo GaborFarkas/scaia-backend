@@ -1,0 +1,45 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "129P02_R4"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "gyengébb fejlődés"
+        EXPRESSION ([pixel] >= 3000 AND [pixel] < 5000)
+        STYLE
+            COLORRANGE 243 235 24 175 229 27
+            DATARANGE 3000 5000
+        END
+    END
+    CLASS
+        NAME "jelentéktelen fejlődés"
+        EXPRESSION ([pixel] >= 5000 AND [pixel] < 6000)
+        STYLE
+            COLORRANGE 175 229 27 55 209 55
+            DATARANGE 5000 6000
+        END
+    END
+    CLASS
+        NAME "fejlődés"
+        EXPRESSION ([pixel] >= 6000 AND [pixel] < 7500)
+        STYLE
+            COLORRANGE 55 209 55 97 139 47
+            DATARANGE 6000 7500
+        END
+    END
+    CLASS
+        NAME "class4"
+        EXPRESSION ([pixel] >= 7500 AND [pixel] <= 9000)
+        STYLE
+            COLORRANGE 97 139 47 75 97 82
+            DATARANGE 7500 9000
+        END
+    END
+    METADATA
+        "wms_title" "129P02_R4"
+    END
+END # LAYER

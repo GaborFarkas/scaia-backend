@@ -228,6 +228,13 @@
                         ]
                     },
                     {
+                        "id": "129P03",
+                        "name": "Ripeness",
+                        "type": "process",
+                        "icon": "fas fa-tractor",
+                        "inputs": null
+                    },
+                    {
                         "id": "129P05",
                         "name": "Weed detection",
                         "type": "process",

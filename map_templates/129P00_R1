@@ -49,7 +49,7 @@ LAYER
     END
     CLASS
         NAME "jelentősen nedvesebb"
-        EXPRESSION ([pixel] >= 1 AND [pixel] < 10)
+        EXPRESSION ([pixel] >= 1 AND [pixel] <= 10)
         STYLE
             COLORRANGE 128 191 172 43 131 186
             DATARANGE 1 10

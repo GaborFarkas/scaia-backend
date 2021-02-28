@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $paramKey = 'param'.$key;
                     if (Input::get($paramKey)) {
                         $validationFields->$paramKey = [
+                            'display' => 'Parameter',
                             'required' => true,
                             'is_datetime' => 'm/d/Y'
                         ];

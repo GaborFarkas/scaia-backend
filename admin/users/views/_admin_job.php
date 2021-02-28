@@ -71,6 +71,17 @@ if (!empty($_POST)) {
                 }
             }
 
+            //Publish job
+            $public = Input::get('public');
+            if ($public != $job->public && ($public == 1 || $public == 0)) {
+                if ($job->status !== 'success' && $job->status !== 'partial') {
+                    $errors[] = 'Cannot publish unfinished job.';
+                } else {
+                    $db->update('jobs', $job->id, ['public' => $public]);
+                    logger($user->data()->id, 'Jobs', "Job $job->id public status changed.");
+                }
+            }
+
             //Update name
             $name = Input::get('name');
             if ($job->name != $name) {

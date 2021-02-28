@@ -38,7 +38,7 @@
     },
     "129P02": {
         "name": "Növényállomány fejlődés",
-        "mapfile": "129P02.map",
+        "mapfile": "129P02_{timestamp}.map",
         "layers": [
             {
                 "id": "129P02_R1",
@@ -110,7 +110,7 @@
     },
     "129P05": {
         "name": "Gyomfedettség",
-        "mapfile": "129P05.map",
+        "mapfile": "129P05_{timestamp}.map",
         "layers": [
             {
                 "id": "129P05_R1",

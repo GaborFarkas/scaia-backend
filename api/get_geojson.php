@@ -13,18 +13,38 @@ if (!$user->isEligible()) {
     die();
 }
 
-if (Input::get('id')) {
+if (Input::get('lyrid')) {
     $db = DB::getInstance();
     $settings = $db->query("SELECT * FROM settings")->first();
-    $id = Input::get('id');
+    $lyrId = Input::get('lyrid');
     $paths = json_decode(file_get_contents('../config/map_paths.json'));
+    if (isset($paths->$lyrId)) {
+        $path = $paths->$lyrId;
 
-    if (file_exists(getConfigPath($settings->vector_output, $abs_us_root).'/'.$paths->$id)) {
-        echo file_get_contents(getConfigPath($settings->vector_output, $abs_us_root).'/'.$paths->$id);
-    } else {
-        http_response_code(404);
-        die();
+        if (strpos($paths->$lyrId, '{timestamp}') !== false) {
+            if (Input::get('jobid')) {
+                $job = fetchJob(Input::get('jobid'));
+
+                if ($job) {
+                    $fileTs = tsToFile($job->timestamp);
+                    $path = str_replace('{timestamp}', $fileTs, $path);
+                } else {
+                    http_response_code(404);
+                    die();  
+                }
+            } else {
+                http_response_code(404);
+                die();
+            }
+        }
+
+        if (file_exists(getConfigPath($settings->vector_output, $abs_us_root).'/'.$path)) {
+            echo file_get_contents(getConfigPath($settings->vector_output, $abs_us_root).'/'.$path);
+        }
     }
+
+    http_response_code(404);
+    die();
 } else {
     echo file_get_contents('../config/basemap.geojson');
 }

@@ -15,7 +15,7 @@ if (Input::get('id') && Input::get('layer')) {
     $job = fetchJob(Input::get('id'));
     if ($job) {
         // Do not allow to access other users' results.
-        if (!$user->apiData()->admin && $user->data()->id != $job->user_id) {
+        if (!$user->apiData()->admin && $user->data()->id != $job->user_id && $job->public == '0') {
             http_response_code(403);
             die();
         }

@@ -17,7 +17,7 @@ if (Input::get('id')) {
     $job = fetchJob(Input::get('id'));
     if ($job) {
         // Do not allow to access other users' results.
-        if (!$user->apiData()->admin && $user->data()->id != $job->user_id) {
+        if (!$user->apiData()->admin && $user->data()->id != $job->user_id && $job->public == '0') {
             http_response_code(403);
             die();
         }
@@ -29,7 +29,7 @@ if (Input::get('id')) {
         if (isset($maps->$prodId)) {
             $db = DB::getInstance();
             $settings = $db->query("SELECT * FROM settings")->first();
-            
+
             $map = $maps->$prodId;
             $map->name = $job->name;
             unset($map->mapfile);

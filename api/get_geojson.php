@@ -26,6 +26,12 @@ if (Input::get('lyrid')) {
                 $job = fetchJob(Input::get('jobid'));
 
                 if ($job) {
+                    // Do not allow to access other users' results.
+                    if (!$user->apiData()->admin && $user->data()->id != $job->user_id) {
+                        http_response_code(403);
+                        die();
+                    }
+
                     $fileTs = tsToFile($job->timestamp);
                     $path = str_replace('{timestamp}', $fileTs, $path);
                 } else {

@@ -19,6 +19,12 @@ if (Input::get('id')) {
 
     // Only handle finished processes with at least partial result.
     if ($job && ($job->status == 'success' || $job->status == 'partial')) {
+        // Do not allow to access other users' results.
+        if (!$user->apiData()->admin && $user->data()->id != $job->user_id) {
+            http_response_code(403);
+            die();
+        }
+
         $maps = json_decode(file_get_contents('../config/maps_dynamic.json'));
         $prodId = $job->product_id;
 

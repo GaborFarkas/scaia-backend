@@ -16,6 +16,11 @@
     "129P03_V1": "129P03VS2NDBId_{timestamp}.geojson",
     "129P03_R2": "129P03RS1dpsvM_{timestamp}.tif",
     "129P03_V2": "129P03VS1dpsvM_{timestamp}.geojson",
+    "129P04_V1": "129P04VS2yield_{timestamp}.geojson",
     "129P05_R1": "129P05RS2_ndvi_{timestamp}.tif",
-    "129P05_V1": "129P05VS2_ndvi_{timestamp}.geojson"
+    "129P05_V1": "129P05VS2_ndvi_{timestamp}.geojson",
+    "222P21_R1": "222P21RS1ccDVV_{timestamp}.tiff",
+    "222P23_R1": "222P23RS2_NDSI_{timestamp}.tiff",
+    "222P24_R1": "222P24RS1ccDVV_{timestamp}.tiff",
+    "222P24_R2": "222P24RS2_NDDI_{timestamp}.tiff"
 }

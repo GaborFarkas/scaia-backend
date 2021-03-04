@@ -108,6 +108,16 @@
             }
         ]
     },
+    "129P04": {
+        "name": "Biomassza tömeg",
+        "layers": [
+            {
+                "id": "129P04_V1",
+                "type": "vector",
+                "name": "Biomassza tömeg"
+            }
+        ]
+    },
     "129P05": {
         "name": "Gyomfedettség",
         "mapfile": "129P05_{timestamp}.map",
@@ -121,6 +131,44 @@
                 "id": "129P05_V1",
                 "type": "vector",
                 "name": "Tábla gyomfertőzöttség"
+            }
+        ]
+    },
+    "222P21": {
+        "name": "Fagykár",
+        "mapfile": "222P21_{timestamp}.map",
+        "layers": [
+            {
+                "id": "222P21_R1",
+                "type": "raster",
+                "name": "Faggyal érintett terület"
+            }
+        ]
+    },
+    "222P23": {
+        "name": "Hóborítás",
+        "mapfile": "222P23_{timestamp}.map",
+        "layers": [
+            {
+                "id": "222P23_R1",
+                "type": "raster",
+                "name": "Hótakaró előfordulása"
+            }
+        ]
+    },
+    "222P24": {
+        "name": "Aszály",
+        "mapfile": "222P24_{timestamp}.map",
+        "layers": [
+            {
+                "id": "222P24_R1",
+                "type": "raster",
+                "name": "Aszállyal érintett terület (S1)"
+            },
+            {
+                "id": "222P24_R2",
+                "type": "raster",
+                "name": "Aszállyal érintett terület (S2)"
             }
         ]
     }

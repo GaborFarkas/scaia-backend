@@ -235,6 +235,13 @@
                         "inputs": null
                     },
                     {
+                        "id": "129P04",
+                        "name": "Biomass estimation",
+                        "type": "process",
+                        "icon": "fas fa-tree",
+                        "inputs": null
+                    },
+                    {
                         "id": "129P05",
                         "name": "Weed detection",
                         "type": "process",

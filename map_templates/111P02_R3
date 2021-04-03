@@ -1,0 +1,45 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "111P02_R3"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "gyengébb fejlődés"
+        EXPRESSION ([pixel] >= 10 AND [pixel] < 45)
+        STYLE
+            COLORRANGE 175 143 73 227 243 181
+            DATARANGE 10 45
+        END
+    END
+    CLASS
+        NAME "jelentéktelen fejlődés"
+        EXPRESSION ([pixel] >= 45 AND [pixel] < 80)
+        STYLE
+            COLORRANGE 227 243 181 55 209 55
+            DATARANGE 45 80
+        END
+    END
+    CLASS
+        NAME "fejlődés"
+        EXPRESSION ([pixel] >= 80 AND [pixel] < 115)
+        STYLE
+            COLORRANGE 55 209 55 97 139 47
+            DATARANGE 80 115
+        END
+    END
+    CLASS
+        NAME "class4"
+        EXPRESSION ([pixel] >= 115 AND [pixel] <= 150)
+        STYLE
+            COLORRANGE 97 139 47 5 97 32
+            DATARANGE 115 150
+        END
+    END
+    METADATA
+        "wms_title" "111P02_R3"
+    END
+END # LAYER

@@ -1,4 +1,238 @@
 {
+    "111P00": {
+        "name": "Talajnedvesség",
+        "mapfile": "111P00_{timestamp}.map",
+        "layers": [
+            {
+                "id": "111P00_R1",
+                "type": "raster",
+                "name": "Téli búza talajnedvesség"
+            }
+        ]
+    },
+    "111P01": {
+        "name": "Téli búza kelés",
+        "mapfile": "111P01_{timestamp}.map",
+        "layers": [
+            {
+                "id": "111P01_R1",
+                "type": "raster",
+                "name": "Kelés állapot (S1)"
+            },
+            {
+                "id": "111P01_V1",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S1)"
+            },
+            {
+                "id": "111P01_R2",
+                "type": "raster",
+                "name": "Kelés állapot (S2)"
+            },
+            {
+                "id": "111P01_V2",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S2)"
+            }
+        ]
+    },
+    "111P02": {
+        "name": "Téli búza növényállomány fejlődés",
+        "mapfile": "111P02_{timestamp}.map",
+        "layers": [
+            {
+                "id": "111P02_R1",
+                "type": "raster",
+                "name": "Növekedési index (S1)"
+            },
+            {
+                "id": "111P02_V1",
+                "type": "vector",
+                "name": "Táblák növekedési indexe (S1)"
+            },
+            {
+                "id": "111P02_V2",
+                "type": "vector",
+                "name": "Táblák relatív állapota (S1)"
+            },
+            {
+                "id": "111P02_R2",
+                "type": "raster",
+                "name": "Relatív  állapot (S1)"
+            },
+            {
+                "id": "111P02_V3",
+                "type": "vector",
+                "name": "Maximális mutató (S1)"
+            },
+            {
+                "id": "111P02_R3",
+                "type": "raster",
+                "name": "Táblák maximális mutatója (S1)"
+            },
+            {
+                "id": "111P02_R4",
+                "type": "raster",
+                "name": "Fejlettségi mutató (S2)"
+            },
+            {
+                "id": "111P02_V4",
+                "type": "vector",
+                "name": "Táblák fejlettségi állapota (S2)"
+            }
+        ]
+    },
+    "111P04": {
+        "name": "Várható hozam",
+        "layers": [
+            {
+                "id": "111P04_V1",
+                "type": "vector",
+                "name": "Téli búza várható hozam"
+            }
+        ]
+    },
+    "111P05": {
+        "name": "Téli búza gyomfedettség",
+        "mapfile": "111P05_{timestamp}.map",
+        "layers": [
+            {
+                "id": "111P05_R1",
+                "type": "raster",
+                "name": "Gyomfertőzöttség"
+            },
+            {
+                "id": "111P05_V1",
+                "type": "vector",
+                "name": "Tábla gyomfertőzöttség"
+            }
+        ]
+    },
+    "113P00": {
+        "name": "Talajnedvesség",
+        "mapfile": "113P00_{timestamp}.map",
+        "layers": [
+            {
+                "id": "113P00_R1",
+                "type": "raster",
+                "name": "Árpa talajnedvesség"
+            }
+        ]
+    },
+    "113P01": {
+        "name": "Árpa kelés",
+        "mapfile": "113P01_{timestamp}.map",
+        "layers": [
+            {
+                "id": "113P01_R1",
+                "type": "raster",
+                "name": "Kelés állapot (S1)"
+            },
+            {
+                "id": "113P01_V1",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S1)"
+            },
+            {
+                "id": "113P01_R2",
+                "type": "raster",
+                "name": "Kelés állapot (S2)"
+            },
+            {
+                "id": "113P01_V2",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S2)"
+            }
+        ]
+    },
+    "113P02": {
+        "name": "Árpa növényállomány fejlődés",
+        "mapfile": "113P02_{timestamp}.map",
+        "layers": [
+            {
+                "id": "113P02_R1",
+                "type": "raster",
+                "name": "Növekedési index (S1)"
+            },
+            {
+                "id": "113P02_V1",
+                "type": "vector",
+                "name": "Táblák növekedési indexe (S1)"
+            },
+            {
+                "id": "113P02_V2",
+                "type": "vector",
+                "name": "Táblák relatív állapota (S1)"
+            },
+            {
+                "id": "113P02_R2",
+                "type": "raster",
+                "name": "Relatív  állapot (S1)"
+            },
+            {
+                "id": "113P02_V3",
+                "type": "vector",
+                "name": "Maximális mutató (S1)"
+            },
+            {
+                "id": "113P02_R3",
+                "type": "raster",
+                "name": "Táblák maximális mutatója (S1)"
+            },
+            {
+                "id": "113P02_R4",
+                "type": "raster",
+                "name": "Fejlettségi mutató (S2)"
+            },
+            {
+                "id": "113P02_V4",
+                "type": "vector",
+                "name": "Táblák fejlettségi állapota (S2)"
+            }
+        ]
+    },
+    "113P03": {
+        "name": "Árpa érés",
+        "mapfile": "113P03_{timestamp}.map",
+        "layers": [
+            {
+                "id": "113P03_R1",
+                "type": "raster",
+                "name": "Érési mutató (S2)"
+            },
+            {
+                "id": "113P03_V1",
+                "type": "vector",
+                "name": "Táblák érési indexe (S2)"
+            },
+            {
+                "id": "113P03_R2",
+                "type": "raster",
+                "name": "Érési mutató (S1)"
+            },
+            {
+                "id": "113P03_V2",
+                "type": "vector",
+                "name": "Parcellák érési indexe (S1)"
+            }
+        ]
+    },
+    "113P05": {
+        "name": "Árpa gyomfedettség",
+        "mapfile": "113P05_{timestamp}.map",
+        "layers": [
+            {
+                "id": "113P05_R1",
+                "type": "raster",
+                "name": "Gyomfertőzöttség"
+            },
+            {
+                "id": "113P05_V1",
+                "type": "vector",
+                "name": "Tábla gyomfertőzöttség"
+            }
+        ]
+    },
     "129P00": {
         "name": "Talajnedvesség",
         "mapfile": "129P00_{timestamp}.map",
@@ -6,12 +240,12 @@
             {
                 "id": "129P00_R1",
                 "type": "raster",
-                "name": "Talajnedvesség"
+                "name": "Kukorica talajnedvesség"
             }
         ]
     },
     "129P01": {
-        "name": "Kelés",
+        "name": "Kukorica kelés",
         "mapfile": "129P01_{timestamp}.map",
         "layers": [
             {
@@ -37,7 +271,7 @@
         ]
     },
     "129P02": {
-        "name": "Növényállomány fejlődés",
+        "name": "Kukorica növényállomány fejlődés",
         "mapfile": "129P02_{timestamp}.map",
         "layers": [
             {
@@ -83,7 +317,7 @@
         ]
     },
     "129P03": {
-        "name": "Érés",
+        "name": "Kukorica érés",
         "mapfile": "129P03_{timestamp}.map",
         "layers": [
             {
@@ -114,12 +348,12 @@
             {
                 "id": "129P04_V1",
                 "type": "vector",
-                "name": "Biomassza tömeg"
+                "name": "Kukorica biomassza tömeg"
             }
         ]
     },
     "129P05": {
-        "name": "Gyomfedettség",
+        "name": "Kukorica gyomfedettség",
         "mapfile": "129P05_{timestamp}.map",
         "layers": [
             {

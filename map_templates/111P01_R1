@@ -1,0 +1,45 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "111P01_R1"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "változatlan"
+        EXPRESSION ([pixel] >= 0 AND [pixel] < 5)
+        STYLE
+            COLORRANGE 166 97 26 223 194 125
+            DATARANGE 0 5
+        END
+    END
+    CLASS
+        NAME "jelentéktelen fejlődés"
+        EXPRESSION ([pixel] >= 5 AND [pixel] < 10)
+        STYLE
+            COLORRANGE 223 194 125 203 247 156
+            DATARANGE 5 10
+        END
+    END
+    CLASS
+        NAME "fejlődés"
+        EXPRESSION ([pixel] >= 10 AND [pixel] < 15)
+        STYLE
+            COLORRANGE 203 247 156 40 235 118
+            DATARANGE 10 15
+        END
+    END
+    CLASS
+        NAME "jelentős fejlődés"
+        EXPRESSION ([pixel] >= 15 AND [pixel] <= 20)
+        STYLE
+            COLORRANGE 40 235 118 64 206 46
+            DATARANGE 15 20
+        END
+    END
+    METADATA
+        "wms_title" "111P01_R1"
+    END
+END

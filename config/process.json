@@ -18,6 +18,7 @@
     "129P00": ["129P00RS1ccdVV_{date}"],
     "129P01": ["129P01RS2_ndvi_{date}", "129P01RS1dpsvi_{date}"],
     "129P02": ["129P02RS1DPSVI_{date}", "129P02RS2_ndvi_{date}"],
+    "129P04": ["129P04VS2yield_{date}"],
     "129P05": ["129P05RS2_NDVI_{date}"],
     "222P24": ["222P24RS2_NDDI_{date}", "222P24RS1dpsvi_{date}"],
     "222P22": ["222P22RS2_NDWI_{date}", "222P22RS1ccDVH_{date}"],

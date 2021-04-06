@@ -1,0 +1,21 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "222P22_R3"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "class1"
+        EXPRESSION ([pixel] >= 0 AND [pixel] <= 1)
+        STYLE
+            COLORRANGE 222 227 237 34 92 227
+            DATARANGE 0 1
+        END
+    END
+    METADATA
+        "wms_title" "222P22_R3"
+    END
+END # LAYER

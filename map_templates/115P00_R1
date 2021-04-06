@@ -1,0 +1,61 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "115P00_R1"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "jelentősen szárazabb"
+        EXPRESSION ([pixel] >= -10 AND [pixel] < -1)
+        STYLE
+            COLORRANGE 215 25 28 241 124 74
+            DATARANGE -10 -1
+        END
+    END
+    CLASS
+        NAME "kissé szárazabb"
+        EXPRESSION ([pixel] >= -1 AND [pixel] < -0.5)
+        STYLE
+            COLORRANGE 241 124 74 254 201 128
+            DATARANGE -1 -0.5
+        END
+    END
+    CLASS
+        NAME "szárazodott"
+        EXPRESSION ([pixel] >= -0.5 AND [pixel] < 0)
+        STYLE
+            COLORRANGE 254 201 128 255 255 191
+            DATARANGE -0.5 0
+        END
+    END
+    CLASS
+        NAME "nincs változás"
+        EXPRESSION ([pixel] >= 0 AND [pixel] < 0.5)
+        STYLE
+            COLORRANGE 255 255 191 199 233 173
+            DATARANGE 0 0.5
+        END
+    END
+    CLASS
+        NAME "nedvesebb"
+        EXPRESSION ([pixel] >= 0.5 AND [pixel] < 1)
+        STYLE
+            COLORRANGE 199 233 173 128 191 172
+            DATARANGE 0.5 1
+        END
+    END
+    CLASS
+        NAME "jelentősen nedvesebb"
+        EXPRESSION ([pixel] >= 1 AND [pixel] <= 10)
+        STYLE
+            COLORRANGE 128 191 172 43 131 186
+            DATARANGE 1 10
+        END
+    END
+    METADATA
+        "wms_title" "115P00_R1"
+    END
+END

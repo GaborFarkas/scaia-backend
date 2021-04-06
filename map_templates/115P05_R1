@@ -1,0 +1,29 @@
+LAYER
+    PROJECTION
+        AUTO
+    END
+    NAME "115P05_R1"
+    TYPE RASTER
+    STATUS ON
+    DATA {layername}
+    CLASSITEM "[pixel]"
+    CLASS
+        NAME "class1"
+        EXPRESSION ([pixel] >= 0 AND [pixel] < 3000)
+        STYLE
+            COLORRANGE 166 97 26 203 247 156
+            DATARANGE 0 3000
+        END
+    END
+    CLASS
+        NAME "class2"
+        EXPRESSION ([pixel] >= 3000 AND [pixel] <= 8000)
+        STYLE
+            COLORRANGE 203 247 156 64 206 46
+            DATARANGE 3000 8000
+        END
+    END
+    METADATA
+        "wms_title" "115P05_R1"
+    END
+END

@@ -233,6 +233,141 @@
             }
         ]
     },
+    "115P00": {
+        "name": "Talajnedvesség",
+        "mapfile": "115P00_{timestamp}.map",
+        "layers": [
+            {
+                "id": "115P00_R1",
+                "type": "raster",
+                "name": "Repce talajnedvesség"
+            }
+        ]
+    },
+    "115P01": {
+        "name": "Repce kelés",
+        "mapfile": "115P01_{timestamp}.map",
+        "layers": [
+            {
+                "id": "115P01_R1",
+                "type": "raster",
+                "name": "Kelés állapot (S1)"
+            },
+            {
+                "id": "115P01_V1",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S1)"
+            },
+            {
+                "id": "115P01_R2",
+                "type": "raster",
+                "name": "Kelés állapot (S2)"
+            },
+            {
+                "id": "115P01_V2",
+                "type": "vector",
+                "name": "Táblák kelés állapota (S2)"
+            }
+        ]
+    },
+    "115P02": {
+        "name": "Repce növényállomány fejlődés",
+        "mapfile": "115P02_{timestamp}.map",
+        "layers": [
+            {
+                "id": "115P02_R1",
+                "type": "raster",
+                "name": "Növekedési index (S1)"
+            },
+            {
+                "id": "115P02_V1",
+                "type": "vector",
+                "name": "Táblák növekedési indexe (S1)"
+            },
+            {
+                "id": "115P02_V2",
+                "type": "vector",
+                "name": "Táblák relatív állapota (S1)"
+            },
+            {
+                "id": "115P02_R2",
+                "type": "raster",
+                "name": "Relatív  állapot (S1)"
+            },
+            {
+                "id": "115P02_V3",
+                "type": "vector",
+                "name": "Maximális mutató (S1)"
+            },
+            {
+                "id": "115P02_R3",
+                "type": "raster",
+                "name": "Táblák maximális mutatója (S1)"
+            },
+            {
+                "id": "115P02_R4",
+                "type": "raster",
+                "name": "Fejlettségi mutató (S2)"
+            },
+            {
+                "id": "115P02_V4",
+                "type": "vector",
+                "name": "Táblák fejlettségi állapota (S2)"
+            }
+        ]
+    },
+    "115P03": {
+        "name": "Repce érés",
+        "mapfile": "115P03_{timestamp}.map",
+        "layers": [
+            {
+                "id": "115P03_R1",
+                "type": "raster",
+                "name": "Érési mutató (S2)"
+            },
+            {
+                "id": "115P03_V1",
+                "type": "vector",
+                "name": "Táblák érési indexe (S2)"
+            },
+            {
+                "id": "115P03_R2",
+                "type": "raster",
+                "name": "Érési mutató (S1)"
+            },
+            {
+                "id": "115P03_V2",
+                "type": "vector",
+                "name": "Parcellák érési indexe (S1)"
+            }
+        ]
+    },
+    "115P04": {
+        "name": "Várható hozam",
+        "layers": [
+            {
+                "id": "115P04_V1",
+                "type": "vector",
+                "name": "Repce várható hozam"
+            }
+        ]
+    },
+    "115P05": {
+        "name": "Repce gyomfedettség",
+        "mapfile": "115P05_{timestamp}.map",
+        "layers": [
+            {
+                "id": "115P05_R1",
+                "type": "raster",
+                "name": "Gyomfertőzöttség"
+            },
+            {
+                "id": "115P05_V1",
+                "type": "vector",
+                "name": "Tábla gyomfertőzöttség"
+            }
+        ]
+    },
     "129P00": {
         "name": "Talajnedvesség",
         "mapfile": "129P00_{timestamp}.map",
@@ -376,6 +511,27 @@
                 "id": "222P21_R1",
                 "type": "raster",
                 "name": "Faggyal érintett terület"
+            }
+        ]
+    },
+    "222P22": {
+        "name": "Belvíz fedettség",
+        "mapfile": "222P22_{timestamp}.map",
+        "layers": [
+            {
+                "id": "222P22_R1",
+                "type": "raster",
+                "name": "Vízfelszín (S2)"
+            },
+            {
+                "id": "222P22_R2",
+                "type": "raster",
+                "name": "Elöntött terület (S2)"
+            },
+            {
+                "id": "222P22_R3",
+                "type": "raster",
+                "name": "Elöntött terület (S1)"
             }
         ]
     },

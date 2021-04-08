@@ -523,7 +523,7 @@
     },
     "111P02_V2": {
         "type": "binned",
-        "column": "_meanmea_1",
+        "column": "_meanmea_3",
         "categories": [
             {
                 "values": [
@@ -1435,7 +1435,7 @@
     },
     "113P02_V2": {
         "type": "binned",
-        "column": "m_20200629mean",
+        "column": "_meanmea_3",
         "categories": [
             {
                 "values": [
@@ -2515,7 +2515,7 @@
     },
     "115P02_V2": {
         "type": "binned",
-        "column": "m_20200629mean",
+        "column": "_meanmean",
         "categories": [
             {
                 "values": [

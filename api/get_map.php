@@ -46,6 +46,8 @@ if (Input::get('id')) {
                 }
             }
 
+            $map->layers = array_values($map->layers);
+
             // Add timestamps to display names.
             // If we have only a single layer, add it to the layer name, as in this case, the group name won't be processed.
             if (count($map->layers) == 1) {

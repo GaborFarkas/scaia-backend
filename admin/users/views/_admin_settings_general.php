@@ -333,7 +333,7 @@ includeHook($hooks, 'pre');
 
               <div class="card no-padding">
                 <div class="card-header">
-                  <h3>MapServer</h3>
+                  <h3>SCAIA</h3>
                 </div>
                 <div class="card-body">
                   <div class="form-group">
@@ -358,6 +358,12 @@ includeHook($hooks, 'pre');
 
                     <label>Vector output folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your raw vector outputs from the backend's root folder (e.g. maps/vector) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
                     <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Vector Output Folder" name="vector_output" id="vector_output" value="<?=$settings->vector_output; ?>">
+                  </div>
+
+                  <div class="form-group">
+
+                    <label>Job folder <a tabindex="-1" title="Note" data-trigger="focus" data-placement="top" class="btn btn-link text-info px-0" data-toggle="popover" data-content="Relative path to your job files from the backend's root folder (e.g. jobs) or absolute path from the disk root."><i class="fa fa-question-circle"></i></a></label>
+                    <input type="text" autocomplete="off" class="form-control ajxtxt" data-desc="Job Folder" name="job_folder" id="job_folder" value="<?=$settings->job_folder; ?>">
                   </div>
                 </div>
               </div>

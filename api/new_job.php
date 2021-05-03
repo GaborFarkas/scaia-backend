@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $ts = count($params) ? 
                     array_reverse($params[0].explode('/')).implode('') :
                     date('Ymd');
-                $jobFile = fopen('/home/backend/pool/'.$fileTs.'.job', 'w');
+                $jobFile = fopen(getConfigPath($settings->job_folder, $abs_us_root).'/'.$fileTs.'.job', 'w');
                 
                 if ($jobFile) {
                     fwrite($jobFile, 'product:'.$prodid.'\nstartdate:'.$ts.'\nenddate:'.$ts.'\n');

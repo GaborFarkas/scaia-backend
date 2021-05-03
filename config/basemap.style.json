@@ -1,6 +1,6 @@
 {
     "type": "categorized",
-    "column": "L_cropID",
+    "column": "C_cropID",
     "categories": [
         {
             "value": 111,

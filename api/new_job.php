@@ -128,7 +128,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ];
                 $db->update('jobs', $job_id, $fields);
             } else {
-                // TODO: Generate request to the processing unit.
+                // Generate request to the processing unit.
+                $ts = count($params) ? 
+                    array_reverse($params[0].explode('/')).implode('') :
+                    date('Ymd');
+                $jobFile = fopen('/home/backend/pool/'.$fileTs.'.job', 'w');
+                
+                if ($jobFile) {
+                    fwrite($jobFile, 'product:'.$prodid.'\nstartdate:'.$ts.'\nenddate:'.$ts.'\n');
+                    fclose($jobFile);
+                } else {
+                    $fields = [
+                        'status' => 'error',
+                        'message' => 'Failed to generate job file.'
+                    ];
+                    $db->update('jobs', $job_id, $fields);
+                }
             }
 
             logger($user->data()->id, 'Jobs', "Started job $job->id.");

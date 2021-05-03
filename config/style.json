@@ -223,7 +223,7 @@
     },
     "111P01_V1": {
         "type": "binned",
-        "column": "fej0524",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -340,7 +340,7 @@
     },
     "111P01_V2": {
         "type": "binned",
-        "column": "20200522mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -457,7 +457,7 @@
     },
     "111P02_V1": {
         "type": "binned",
-        "column": "_meanmean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -523,7 +523,7 @@
     },
     "111P02_V2": {
         "type": "binned",
-        "column": "_meanmea_3",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -640,7 +640,7 @@
     },
     "111P02_V3": {
         "type": "binned",
-        "column": "_meanmea_2",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -808,7 +808,7 @@
     },
     "111P02_V4": {
         "type": "binned",
-        "column": "A_20200802mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -874,7 +874,7 @@
     },
     "111P04_V1": {
         "type": "binned",
-        "column": "129P04",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -973,7 +973,7 @@
     },
     "111P05_V1": {
         "type": "binned",
-        "column": "1118mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1135,7 +1135,7 @@
     },
     "113P01_V1": {
         "type": "binned",
-        "column": "fej0524",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1252,7 +1252,7 @@
     },
     "113P01_V2": {
         "type": "binned",
-        "column": "20200522mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1369,7 +1369,7 @@
     },
     "113P02_V1": {
         "type": "binned",
-        "column": "s_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1435,7 +1435,7 @@
     },
     "113P02_V2": {
         "type": "binned",
-        "column": "_meanmea_3",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1552,7 +1552,7 @@
     },
     "113P02_V3": {
         "type": "binned",
-        "column": "A_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1720,7 +1720,7 @@
     },
     "113P02_V4": {
         "type": "binned",
-        "column": "A_20200802mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1837,7 +1837,7 @@
     },
     "113P03_V1": {
         "type": "binned",
-        "column": "_ndbispanDmean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -1954,7 +1954,7 @@
     },
     "113P03_V2": {
         "type": "binned",
-        "column": "_20200828mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2053,7 +2053,7 @@
     },
     "113P05_V1": {
         "type": "binned",
-        "column": "1118mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2215,7 +2215,7 @@
     },
     "115P01_V1": {
         "type": "binned",
-        "column": "fej0524",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2332,7 +2332,7 @@
     },
     "115P01_V2": {
         "type": "binned",
-        "column": "20200522mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2449,7 +2449,7 @@
     },
     "115P02_V1": {
         "type": "binned",
-        "column": "s_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2515,7 +2515,7 @@
     },
     "115P02_V2": {
         "type": "binned",
-        "column": "_meanmean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2632,7 +2632,7 @@
     },
     "115P02_V3": {
         "type": "binned",
-        "column": "A_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2800,7 +2800,7 @@
     },
     "115P02_V4": {
         "type": "binned",
-        "column": "A_20200802mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -2917,7 +2917,7 @@
     },
     "115P03_V1": {
         "type": "binned",
-        "column": "_ndbispanDmean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3034,7 +3034,7 @@
     },
     "115P03_V2": {
         "type": "binned",
-        "column": "_20200828mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3175,7 +3175,7 @@
     },
     "115P05_V1": {
         "type": "binned",
-        "column": "1118mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3337,7 +3337,7 @@
     },
     "129P01_V1": {
         "type": "binned",
-        "column": "fej0524",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3454,7 +3454,7 @@
     },
     "129P01_V2": {
         "type": "binned",
-        "column": "20200522mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3571,7 +3571,7 @@
     },
     "129P02_V1": {
         "type": "binned",
-        "column": "s_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3637,7 +3637,7 @@
     },
     "129P02_V2": {
         "type": "binned",
-        "column": "m_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3754,7 +3754,7 @@
     },
     "129P02_V3": {
         "type": "binned",
-        "column": "A_20200629mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -3922,7 +3922,7 @@
     },
     "129P02_V4": {
         "type": "binned",
-        "column": "A_20200802mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -4039,7 +4039,7 @@
     },
     "129P03_V1": {
         "type": "binned",
-        "column": "_ndbispanDmean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -4156,7 +4156,7 @@
     },
     "129P03_V2": {
         "type": "binned",
-        "column": "_20200828mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -4222,7 +4222,7 @@
     },
     "129P04_V1": {
         "type": "binned",
-        "column": "129P04",
+        "column": "mean",
         "categories": [
             {
                 "values": [
@@ -4321,7 +4321,7 @@
     },
     "129P05_V1": {
         "type": "binned",
-        "column": "1118mean",
+        "column": "mean",
         "categories": [
             {
                 "values": [

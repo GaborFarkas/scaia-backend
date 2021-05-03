@@ -134,11 +134,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     date('Y-m-d');
                 $startDate = date('Yms', strtotime("$jobTs -72 days"));
                 $endDate = str_replace('-', '', $jobTs);
-                
+
                 $jobFile = fopen(getConfigPath($settings->job_folder, $abs_us_root).'/'.$fileTs.'.job', 'w');
                 
                 if ($jobFile) {
-                    fwrite($jobFile, 'product:'.$prodid.'\nstartdate:'.$startDate.'\nenddate:'.$endDate.'\n');
+                    fwrite($jobFile, "product:".$prodid."\nstartdate:".$startDate."\nenddate:".$endDate."\n");
                     fclose($jobFile);
                 } else {
                     $fields = [

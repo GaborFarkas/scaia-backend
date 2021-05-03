@@ -1482,6 +1482,16 @@ if (!function_exists('fetchAllJobs')) {
     }
 }
 
+if (!function_exists('fetchRunningJobs')) {
+    function fetchRunningJobs() {
+      $db = DB::getInstance();
+      $query = $db->query('SELECT * FROM jobs WHERE archived = 0 AND status = ?', ["running"]);
+      $results = $query->results();
+
+      return $results;
+    }
+}
+
 if (!function_exists('fetchJob')) {
     function fetchJob($jobId, $archived = false) {
       $db = DB::getInstance();

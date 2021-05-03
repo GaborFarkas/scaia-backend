@@ -129,13 +129,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $db->update('jobs', $job_id, $fields);
             } else {
                 // Generate request to the processing unit.
-                $ts = count($params) ? 
-                    array_reverse($params[0].explode('/')).implode('') :
-                    date('Ymd');
+                $jobTs = count($params) ? 
+                    array_reverse($params[0].explode('/')).implode('-') :
+                    date('Y-m-d');
+                $startDate = date('Yms', strtotime("$jobTs -72 days"));
+                $endDate = str_replace('-', '', $jobTs);
+                
                 $jobFile = fopen(getConfigPath($settings->job_folder, $abs_us_root).'/'.$fileTs.'.job', 'w');
                 
                 if ($jobFile) {
-                    fwrite($jobFile, 'product:'.$prodid.'\nstartdate:'.$ts.'\nenddate:'.$ts.'\n');
+                    fwrite($jobFile, 'product:'.$prodid.'\nstartdate:'.$startDate.'\nenddate:'.$endDate.'\n');
                     fclose($jobFile);
                 } else {
                     $fields = [

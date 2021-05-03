@@ -22,8 +22,8 @@ foreach ($jobs as $job) {
 
     if (file_exists($jobFolder.'/'.$fileTs.'.status')) {
         $status = file_get_contents($jobFolder.'/'.$fileTs.'.status');
-        $statKey = $status.explode(':')[0];
-        $statValue = $status.explode(':')[1];
+        $statKey = explode(':', $status)[0];
+        $statValue = explode(':', $status)[1];
 
         // We have an error
         if ($statKey === 'PERMERROR') {

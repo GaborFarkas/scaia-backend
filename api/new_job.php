@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 // Generate request to the processing unit.
                 $jobTs = count($params) ? 
-                    array_reverse($params[0].explode('/')).implode('-') :
+                    implode('-', array_reverse(explode('/', $params[0]))) :
                     date('Y-m-d');
                 $startDate = date('Yms', strtotime("$jobTs -72 days"));
                 $endDate = str_replace('-', '', $jobTs);
